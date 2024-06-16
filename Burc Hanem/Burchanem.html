@@ -1,0 +1,2213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="bootstrap.css">
+
+
+  <head>
+    <link rel="shortcut icon" href="resimler/Glogo.png">
+    <title>| Burç Hanem</title>
+  </head>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+  <style>
+    body {
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+
+    .container-fluid #logo img {
+      width: 3em;
+      height: 3em;
+    }
+
+    .navbar ul li a {
+      color: black;
+      font-size: 1.10em;
+    }
+
+    .navbar ul li a:hover {
+      text-decoration: underline;
+      color: lightgreen;
+    }
+
+    .dropdown-item {
+      text-decoration: none !important;
+      background-color: #198754;
+      color: white !important;
+      border: 2px solid black;
+      border-radius: 5px;
+      margin-bottom: 1px;
+    }
+
+    .dropdown-item:hover {
+      text-align: center;
+    }
+
+    .dropdown-item:hover {
+      background-color: lightgreen;
+      color: black !important;
+      /* border: 2px solid white; */
+    }
+
+    img:hover {
+      opacity: 0.9;
+    }
+
+    #searchbar {
+      box-shadow: 2px 2px 2px gray;
+      width: 100%;
+    }
+
+    #searchbar:hover {
+      box-shadow: 3px 3px 3px 3px gray;
+    }
+
+    form #searchbar:focus {
+      outline: none;
+      border: 1px solid #198754;
+      box-shadow: none;
+
+      box-shadow: 3px 3px 3px 3px gray;
+
+    }
+
+    form #searchbutton {
+      border: 1px solid #198754;
+      background-color: white;
+      color: #198754;
+
+      position: absolute;
+      right: 6em;
+    }
+
+    form #searchbutton:focus {
+      outline: none;
+      box-shadow: none;
+
+    }
+
+    form #searchbutton:hover {
+      background-color: #198754;
+      color: white;
+    }
+
+    #girisyap,
+    #kayitol {
+      background-color: white;
+      border: 1px solid #198754;
+      color: #198754;
+    }
+
+    #girisyap:hover,
+    #kayitol:hover {
+      background-color: #198754;
+      color: white;
+    }
+
+    footer {
+      color: white;
+    }
+
+    footer .row {
+      padding: 3rem;
+    }
+
+    #hosgeldiniz h4 {
+      position: absolute;
+      left: 80px;
+      font-style: italic;
+    }
+
+    p {
+      letter-spacing: 0.025em;
+      /* font-size: 1.10em; */
+    }
+
+    p::first-letter {
+      margin-left: 20px;
+    }
+
+    #content img {
+      width: 10em;
+      display: block;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    .fa-house {
+      font-size: 1.5em;
+      /* background-color: #157347; */
+      /* background-color: green; */
+      border-radius: 10px;
+      padding: 5px;
+    }
+
+    .fa-house:hover {
+      opacity: 0.8;
+    }
+
+    .carousel-control-prev-icon:hover {
+      background-color: #C73140;
+      border-radius: 20px;
+      padding: 5px;
+    }
+
+    .carousel-control-next-icon:hover {
+      background-color: #157347;
+      border-radius: 20px;
+      padding: 5px;
+    }
+
+    form button {
+      margin-left: auto !important;
+      margin-right: auto !important;
+      display: block !important;
+    }
+
+    form #description {
+      width: 100%;
+      height: 130px;
+    }
+
+    #hakkimizda {
+      background-color: #000000;
+    }
+
+    footer p a {
+      font-size: 25px;
+      margin: 0 15px;
+      color: white;
+    }
+
+    footer div {
+      margin-top: 10px;
+      text-align: end;
+    }
+
+    footer p .facebook:hover {
+      color: #395693;
+    }
+
+    footer p .twitter:hover {
+      color: #1C9BE9;
+    }
+
+    footer p .instagram:hover {
+      color: #F60083;
+    }
+
+    .accordion-body {
+      background-color: #FFFF80;
+    }
+
+    #girisyapfacebook {
+      text-decoration: none;
+      background-color: white;
+      color: #395693;
+      border: 1px solid #395693;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    #girisyapfacebook:hover {
+      background-color: #395693;
+      color: white;
+    }
+
+    #girisyapgoogle {
+      text-decoration: none;
+      background-color: white;
+      color: black;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    #girisyapgoogle:hover {
+      background-color: black;
+      color: white;
+    }
+
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        scale: 0.5;
+      }
+
+      to {
+        opacity: 1;
+        scale: 1;
+      }
+    }
+
+    .block {
+      animation: appear 5s linear;
+      animation-timeline: view();
+      animation-range: entry 0% cover 20%;
+      /* 35 */
+    }
+  </style>
+
+</head>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+
+
+  <div id="container1"
+    class="container-fluid bg-dark p-2 pe-5 ms-1 d-flex justify-content-end shadow rounded-5 rounded-top-0">
+    <div id="hosgeldiniz">
+      <h4 class="text-white d-none d-sm-block">Hoş Geldiniz :)</h4>
+    </div>
+    <div>
+      <button type="button" id="girisyap" class="btn btn-outline-success rounded-pill" data-bs-toggle="modal"
+        data-bs-target="#myModal1">Giriş Yap</button>
+      <button type="button" id="kayitol" class="btn btn-outline-success rounded-pill ms-1" data-bs-toggle="modal"
+        data-bs-target="#myModal2">Kayıt
+        Ol</button>
+    </div>
+
+    <div class="modal" id="myModal1" data-backdrop="static">
+      <div class="modal-dialog">
+        <div class="modal-content bg-warning">
+          <div class="modal-header">
+            <h4 class="modal-title">Giriş Yap</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+
+              <div class="mb-3 form-floating">
+                <input type="email" class="form-control" id="email" placeholder="info@example.com">
+                <label for="email">Email Adresiniz</label>
+              </div>
+
+              <div class="mb-3 form-floating">
+                <input type="password" class="form-control" id="password" placeholder="">
+                <label for="password">Şifreniz</label>
+              </div>
+
+              <div>
+                <p class="text-center">-------------------- YA DA --------------------</p>
+              </div>
+
+              <div>
+                <p class="text-center">
+                  <a id="girisyapfacebook" href=""><i class="fab fa-facebook"></i> ile Giriş Yap</a>
+                  <a id="girisyapgoogle" href=""><i class="fa-brands fa-google"></i> ile Giriş Yap</a>
+                </p>
+              </div>
+
+              <div class="mt-4">
+                <p class="text-center">
+                  <a href="">Şifrenizi mi unuttunuz ?</a>
+                </p>
+              </div>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary mx-auto w-100 mb-3">Giriş Yap</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal" id="myModal2" data-backdrop="static">
+      <div class="modal-dialog">
+        <div class="modal-content bg-info">
+          <div class="modal-header">
+            <h4 class="modal-title">Kayıt Ol</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+
+              <div class="mb-3 form-floating">
+                <input type="email" class="form-control" id="email" placeholder="info@example.com">
+                <label for="email">Cep Telefonu Numarası veya E-posta</label>
+              </div>
+
+              <div class="mb-3 form-floating">
+                <input type="text" class="form-control" id="ad-soyad" placeholder="">
+                <label for="ad-soyad">Adı Soyadı</label>
+              </div>
+
+              <div class="mb-3 form-floating">
+                <input type="text" class="form-control" id="kullaniciadi" placeholder="">
+                <label for="kullaniciadi">Kullanıcı adı</label>
+              </div>
+
+              <div class="mb-3 form-floating">
+                <input type="password" class="form-control" id="password" placeholder="">
+                <label for="password">Şifre</label>
+              </div>
+
+              <div class="form-check ms-2">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Beni Hatırla
+                </label>
+              </div>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <!-- <button class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button> -->
+            <button class="btn btn-primary mx-auto w-100 mb-3">Kayıt Ol</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+
+  <!-- ---------------------------------------------- -->
+  <nav class="navbar navbar-expand-lg shadow-lg mx-3 mt-2 px-4 rounded-5 sticky-top bg-light bg-gradient">
+    <div class="container-fluid">
+      <a class="navbar-brand" id="logo" href="Burchanem.html"><img class="rounded-circle" src="resimler/Glogo.png" alt=""></a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-white bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-secondary" id="offcanvasDarkNavbarLabel">Burç Hanem</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body bg-success rounded-5">
+          <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+            <li class="nav-item">
+              <!-- <a class="nav-link me-2" aria-current="page" href="#">Ana Sayfa</a> -->
+              <a class="nav-link me-2" aria-current="page" href="Burchanem.html"><i class="fa-solid fa-house"></i></a>
+            </li>
+
+            <li class="nav-item dropend mt-1">
+              <a class="nav-link dropdown-toggle me-2" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Burçlar
+              </a>
+              <ul class="dropdown-menu py-0">
+                <li><a class="dropdown-item" href="#koc">Koç</a></li>
+                <li><a class="dropdown-item" href="#boga">Boğa</a></li>
+                <li><a class="dropdown-item" href="#ikizler">İkizler</a></li>
+                <li><a class="dropdown-item" href="#yengec">Yengeç</a></li>
+                <li><a class="dropdown-item" href="#aslan">Aslan</a></li>
+                <li><a class="dropdown-item" href="#basak">Başak</a></li>
+                <li><a class="dropdown-item" href="#terazi">Terazi</a></li>
+                <li><a class="dropdown-item" href="#akrep">Akrep</a></li>
+                <li><a class="dropdown-item" href="#yay">Yay</a></li>
+                <li><a class="dropdown-item" href="#oglak">Oğlak</a></li>
+                <li><a class="dropdown-item" href="#kova">Kova</a></li>
+                <li><a class="dropdown-item" href="#balik">Balık</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item me-2 mt-1">
+              <a class="nav-link" href="#burcozellik">Burç Özellikleri</a>
+            </li>
+
+            <li class="nav-item me-2 mt-1">
+              <a class="nav-link" href="#iletisim">İletişim</a>
+            </li>
+            <li class="nav-item me-2 mt-1">
+              <a class="nav-link" href="#hakkimizda">Hakkımızda</a>
+            </li>
+          </ul>
+
+          <form class="d-flex p-2" role="search">
+            <input id="searchbar" class="form-control me-1 rounded-pill ps-4" type="search" placeholder="Search..."
+              aria-label="Search">
+            <!-- <button id="searchbutton" class="btn btn-outline-success rounded-5" type="submit">
+                          <i class="fa-solid fa-magnifying-glass"></i>
+                      </button> -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- KAYAN RESİMLER -->
+  <div id="carouselcontainer" class="container-fluid ms-3 me-3">
+
+    <div class="row w-100">
+      <div class="col-xs-12 col-lg-4">
+        <div id="carouselExampleCaptions" class="carousel slide mt-3 mb-5" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+              aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="#koc"><img src="resimler/koc-burcu-1-1.webp" class="d-block w-100 rounded-4"
+                  style="height: 23.5rem;" alt="..."></a>
+              <div class="carousel-caption d-md-block">
+                <h4>Koç</h4>
+                <h5>(21 Mart - 20 Nisan)</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a href="#boga"><img src="resimler/boga-burcu-aylik-yorum.webp" class="d-block w-100 rounded-4"
+                  style="height: 23.5rem;" alt="..."></a>
+              <div class="carousel-caption d-md-block">
+                <h4>Boğa</h4>
+                <h5>(21 Nisan - 20 Mayıs)</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a href="#ikizler"><img src="resimler/ikizler-burcu-1-1.webp" class="d-block w-100 rounded-4"
+                  style="height: 23.5rem;" alt="..."></a>
+              <div class="carousel-caption d-md-block">
+                <h4>İkizler</h4>
+                <h5>(21 Mayıs - 20 Haziran)</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a href="#yengec"><img src="resimler/yengec-burcu-1-1.webp" class="d-block w-100 rounded-4"
+                  style="height: 23.5rem;" alt="..."></a>
+              <div class="carousel-caption d-md-block">
+                <h4>Yengeç</h4>
+                <h5>(21 Haziran - 21 Temmuz)</h5>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+
+      <div class="col-xs-12 col-lg-4">
+        <div id="carouselExampleCaptions2" class="carousel slide mt-3 mb-5" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="3"
+              aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="#aslan"><img src="resimler/aslan-burcu-1-1.webp" class="d-block w-100 rounded-4"
+                  style="height: 23.5rem;" alt="..."></a>
+              <div class="carousel-caption d-md-block">
+                <h4>Aslan</h5>
+                  <h5>(22 Temmuz - 23 Ağustos)</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a href="#basak"><img src="resimler/basak-burcu-1-2.webp" class="d-block w-100 rounded-4"
+                  style="height: 23.5rem;" alt="..."></a>
+              <div class="carousel-caption d-md-block">
+                <h4>Başak</h4>
+                <h5>(24 Ağustos - 23 Eylül)</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a href="#terazi"><img src="resimler/terazi-burcu-1-1.webp" class="d-block w-100 rounded-4"
+                  style="height: 23.5rem;" alt="..."></a>
+              <div class="carousel-caption d-md-block">
+                <h4>Terazi</h4>
+                <h5>(24 Eylül - 23 Ekim)</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a href="#akrep"><img src="resimler/akrep-burcu-1.webp" class="d-block w-100 rounded-4"
+                  style="height: 23.5rem;" alt="..."></a>
+              <div class="carousel-caption d-md-block">
+                <h4>Akrep</h4>
+                <h5>(24 Ekim - 22 Kasım)</h5>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions2"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions2"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+
+      <div class="col-xs-12 col-lg-4">
+        <div id="carouselExampleCaptions3" class="carousel slide mt-3 mb-5" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="3"
+              aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a href="#yay"><img src="resimler/yay-burcu-1-2.webp" class="d-block w-100 rounded-4"
+                  style="height: 23.5rem;" alt="..."></a>
+              <div class="carousel-caption d-md-block">
+                <h4>Yay</h4>
+                <h5>(23 Kasım - 21 Aralık)</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a href="#oglak"><img src="resimler/oglak-burcu-1-2.webp" class="d-block w-100 rounded-4"
+                  style="height: 23.5rem;" alt="..."></a>
+              <div class="carousel-caption d-md-block">
+                <h4>Oğlak</h4>
+                <h5>(22 Aralık - 20 Ocak)</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a href="#kova"><img src="resimler/kova-burcu-1.webp" class="d-block w-100 rounded-4"
+                  style="height: 23.5rem;" alt="..."></a>
+              <div class="carousel-caption d-md-block">
+                <h4>Kova</h4>
+                <h5>(21 Ocak - 18 Şubat)</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a href="#balik"><img src="resimler/balik-burcu-1-2.webp" class="d-block w-100 rounded-4"
+                  style="height: 23.5rem;" alt="..."></a>
+              <div class="carousel-caption d-md-block">
+                <h4>Balık</h4>
+                <h5>(19 Şubat - 20 Mart) </h5>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions3"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions3"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          <div id="koc"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- KAYAN RESİMLER BİTİŞ -->
+
+
+
+
+  <div id="content" class="container-fluid mt-5 view">
+
+    <!-- KOÇ BURCU BAŞLANGIÇ -->
+    <div class="row border border-5 border-dark rounded-5 p-4 bg-dark text-white">
+      <h2 class="text-center block">Koç Burcu <small>(21 Mart - 20 Nisan)</small></h2>
+      <div class="col-12 mt-1 block">
+        <img class="rounded-circle" src="resimler/koc-burcu-1-1.webp" alt="">
+        <h4 class="mb-2 text-success">Kişisel Özellikleri:</h4>
+        <p class="my-auto">Koç, Burçlar kuşağının ilk burcudur. Hareketli ve enerjik oluşları ile tanınırlar. Ben
+          egoları çok fazla gelişmiştir. BEN, onların aynası olmuştur adeta. Bu burçta doğanlar çok pratiktirler.
+          Olaylar karşısında coşkularını gizleyemezler. Yaşam yolunda canlılıklarını ve atılganlıklarını yitirmeden
+          heyecanla ilerlerler. Merak ettikleri konularda olabildiğince yaratıcılardır. Amaçları doğrultusunda
+          ilerlerken, kendilerini eylemleri ile kanıtlamak isterler. Eğer Koç'lar girişimde bulunacakları zaman
+          izleyecekleri rotayı ayrıntıları ile planlarsa, enerjik yapılarının da yardımı ile daha da üretken
+          olabilirler. Bencilliklerinden kaynaklanan sabırsızlıkları ve söz dinlemez yaratılışları yüzünden zaman zaman
+          güç durumlara düştükleri de olur. Böyle anlarda başladıkları işlerini sonuçlandırmadan bırakırlar. Konuşmaları
+          abartılıdır, bazen gerçekleri değiştirerek anlatırlar. Kavrama yetenekleri fazla olan Koç'lar yaşam sahnesinin
+          başrolünde olmayı tercih ederler. Aşırı kıskanç ve bağımsızlıklarına düşkün olurlar.</p>
+        <h4 class="mt-5 mb-2 text-warning">Fiziksel Özellikleri:</h4>
+        <p>Fiziksel yapıları uzun yüzlü ve uzun boyludurlar. Kolları ve bacakları güçlüdür. Esmer ve kıvırcık saçları
+          vardır. Bakışları delici ve keskindir. Sağlıklı bir ciltleri vardır.Spor yapmaya meraklı oldukları için de,
+          bir çok spor salonlarında Koçlara rastlayabilirsiniz. Güzel dişleri olan Koçların; gözlerini dikerek
+          gülümsemesi, çevrelerini etkisi altına alır.</p>
+      </div>
+
+
+      <div class="d-flex mx-auto w-100 mt-4">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger me-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+          Koç Kadını
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div id="modal-content1" class="modal-content bg-danger text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Koç Kadını Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>İhtiyatsız, coşkulu ve dik kafalı olan siz Koç kadınları için yaşam göründüğü kadar kolay değildir.
+                  Tutkulu ve idealist yapınızı her zaman vurgulayacak bir yaşam biçimini benimserken, himayeci ve
+                  korumacı içgüdünüzü ön plana çıkaran bir eş arar, size kafa tutacak bir sevgilinin özlemini
+                  duyarsınız. İlişkilerinizde son derece kıskanç bir yapı sergilersiniz.Tutkularınız derin, hisleriniz
+                  içtendir. Erkeğinizin iyi ve kötü gününde daima yanında oluşunuz, sizi ideal bir iş yapar.Yaşamınızda
+                  çocuklarınızın önemi çok büyüktür. Onlarla iyi geçinir ve onlara büyülü bir dünya yaratırsınız. Diğer
+                  annelere göre tek farkınız, her ağladıklarında koşup kucağınıza almayacak kadar onları onurlu bir
+                  kişilik kazandırma savaşı vermenizdir.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+          Koç Erkeği
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content bg-primary text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Koç Erkeği Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Bu kişiler oldukça çekici ve etkileyicidirler. Otoriterdirler. İstekleri gerçekleştirme konusunda
+                  engel tanımazlar. Aynı zamanda cüretkardırlar. Karşı tarafı avlaması gereken bir av olarak görürler.
+                  Bir Koç’la ilişki yaşamak o kadar kolay değildir. Eğer uzun süreli bir beraberlik planlıyorsanız, her
+                  an her şeye hazır olmalısınız. Heyecanlı ve meydan okuyan bir kişilikleri vardır.Yaşamlarında ikinci
+                  olmaktan nefret ettikleri için de, beraberliklerine kendi damgalarını vuran Koç’ların yanında olmak
+                  bile başlı başına bir olaydır. Birlikte oldukları kişiyi nefessiz bırakacak kadar hareketlidirler.
+                  Disipline gelemeyen araştırmacı ruhlarının derinliklerinde, onlara eşlik edecek bir sevgiliye
+                  gereksinim duyarlar ve yaşamlarında duygularıyla yarışırlar. Bağımsız kişiliklerinin sürekli sevgi ile
+                  beslenmeye ihtiyaçları vardır. Aşkta zafere ulaşmak isterler. Daha genç yaşlarda kafasındaki kişinin
+                  tipi ve kişiliğini şekillendirmiştir. Kıskançlık, onun duygularını besleyeceği için, bu
+                  özelliklerinden sıyrılmalarını beklememelisiniz. Gururludur ve kırıldığı zaman kolay affetmez. Sürekli
+                  övgüye ve takdir edilmeye ihtiyaç duyarlar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="boga"></div>
+      </div>
+
+    </div>
+    <!-- KOÇ BURCU BİTİŞ -->
+
+
+
+
+    <!-- BOĞA BURCU BAŞLANGIÇ -->
+    <div class="row border border-5 border-dark rounded-5 p-4 bg-dark text-white mt-5">
+      <h2 class="text-center block">Boğa Burcu <small>(21 Nisan - 20 Mayıs)</small></h2>
+      <div class="col-12 mt-1 block">
+        <img class="rounded-circle" src="resimler/boga2-burcu-1-2.webp" alt="">
+        <h4 class="mb-2 text-success">Kişisel Özellikleri:</h4>
+        <p class="my-auto">Boğa'lar hedefleri doğrultusunda ilerlerken, tüm dikkatlerini toplayabilme yeteneklerinin
+          yanında maddecilikleri ile tanınırlar. SAHİP olma onların yaşam gerçekleridir. Bireysel ilişkiler konusunda
+          son derece güvenilir olan Boğa'lar, insanlara yardım etmekten hoşlanırlar. Yaşamları boyunca güven ararlar ve
+          bu yüzden kendilerini riske atmazlar. Amaçladıkları işler konusunda gösterdikleri sabır, bazen diğer kişileri
+          çatlatacak boyutlarda olabilir. Bütün bunlara rağmen çevresi tarafından aranılan, sıcakkanlı insanlardır.
+          Sürekli somut konularla uğraşmayı severler, doğada bulunan olaylardan örneklemelerle işlerini başarılı bir
+          şekilde yürütürler. Bu yüzden ruhsal olarak da doyumlu kişilerdir. Olayları organize ederlerken rahatlıklarını
+          gözetirler ve kendilerinin zevklerine uygun olmasına önem verirler. Yaşamdaki isteklerini elde ettikleri
+          zaman, hiçbir koşul onları başka yönlere çekemez. Parayı rahata ulaşmak için bir araç olarak görürler. Mal ve
+          mülk edinme konusunda beceriklidirler. Finans ve yatırım konuları ilgilerini çeker.</p>
+        <h4 class="mt-5 mb-2 text-warning">Fiziksel Özellikleri:</h4>
+        <p>Kısa boylu, sağlam bir boyun yapısına sahiptirler. Kısa bir boyun ve mahmur bakışlıdırlar. Esmer tenli olup,
+          koyu ve sıcak bakışlı kişilerdir. Saçlar gür ve kıvırcık olabilir.Özellikle boğa kadınları genç yaşlarda çok
+          güzel olmalarına karşın, ileri yaşlarda aşırı nişastalı yiyecekler tükettikleri için, yüz hatları hantallaşır
+          ve kalın bir bedene sahip olurlar.</p>
+      </div>
+
+
+      <div class="d-flex mx-auto w-100 mt-4">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger me-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+          Boğa Kadını
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div id="modal-content1" class="modal-content bg-danger text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Boğa Kadını Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Çok güçlü bir fiziksel yapıya sahip oldukları için, aşkta da aşırılıklara kaçabilirler.z. Gerçek
+                  sevgiyi ararken, yanlış evliliklere sürüklenebilirler.. Sessiz, sakin yapınıza rağmen, derin ve yoğun
+                  duygulara sahiptirler.. Ses tonları mükemmeldirler. Sanata karşı eğilimlerini engelleyemezler.
+                  Güzelliğe ve uyuma olan tutkularını herkes anlayamaz. Her şeyden şikayet eden kadınlardan olmadıkları
+                  için de, çoğu kez gereğinden fazla sorumluluk alırlar.. Annelik ve eş olmak onlara çok yakışır. Hiç bu
+                  kadar eviyle bütünleşen bir kişi göremezsiniz. Sakin ve dişi yapılarıyla çocuklarını ve sevdiklerini
+                  çok güzel taşır ve hiç de şikayet etmezler.. Çocukları daha küçük yaşta disiplinli ve derli toplu
+                  olmayı öğrenmişlerdir ve ömür boyu annalerine minnettar kalıcaklardır. Mutfak malzemelerine karşı
+                  zaafları çok fazladır. Günün uzun bir zamanını mutfakta geçirebilirler.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+          Boğa Erkeği
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content bg-primary text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Boğa Erkeği Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Ciddi ve sakin yapıları ile, iyi bir aile reisi olmaya adaydırlar. Son derece sabırlı, pratik ve
+                  çözümleyicidirler. Doğuştan baba özelliklerine sahip oldukları için muhakkak baba olmaları gerekmez.
+                  Çevresindeki her çocuğa gerçek bir şevkat gösterir. Yüksek standartta yaşadıkları için, konforlu bir
+                  hayata hiçbir zaman “hayır” demezler. En büyük amaçları; sevdikleri ile birlikte, duygu dolu anlar
+                  yaşamalarıdır. Köklerine çok bağlı olan bu kişiler, ömür boyu yaşlı akrabalarının her türlü
+                  sorunlarına koşarlar. Yaşamın temel taşları oldukları için de ne zaman başı sıkışan bir dostu varsa o
+                  her zaman ordadır. Onlara özel günlerinde, çok sevdikleri bir kitap, deri bir cüzdan, elektronik
+                  oyunlar, onları rahat ettirecek aksesuar niteliğinde eşyalar, örneğin; bir kuş tüyü yastık
+                  alabilirsiniz.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="ikizler"></div>
+      </div>
+
+    </div>
+    <!-- BOĞA BURCU BİTİŞ -->
+
+
+
+    <!-- İkizler BURCU BAŞLANGIÇ -->
+    <div class="row border border-5 border-dark rounded-5 p-4 bg-dark text-white mt-5">
+      <h2 class="text-center block">İkizler Burcu <small>(21 Mayıs - 20 Haziran)</small></h2>
+      <div class="col-12 mt-1 block">
+        <img class="rounded-circle" src="resimler/ikizler-burcu-1-1.webp" alt="">
+        <h4 class="mb-2 text-success">Kişisel Özellikleri:</h4>
+        <p class="my-auto">İkizler burcu insanları hızlı düşüncelerine uygun çabuk hareket ederler. Ayni anda birkaç işi
+          birden yapabilirler. Onların adapte olamayacakları iş yoktur. Bu yüzden değişik karakterli olmaları ile
+          tanınırlar. Bu yapılarını her zaman görebilmek mümkündür. Son derece neşeli ve mutlu oldukları bir anda,
+          aniden mutsuz olabilirler. Çevreleri tarafından sürekli yanlış anlaşılabilirler. Herhangi bir konuda bilgileri
+          az bile olsa, bunu çok iyi gizlemeyi başarırlar. Aksine; kulaktan dolma duydukları bilgileri öyle ustaca
+          anlatırlar ki, dinleyenler onları o işin uzmanı sanırlar. Pratik zekalarıyla, çekici ve akıllıdırlar. Bu
+          nedenle onları tanımlayan sözcük 'Düşünüyorum' dur. Fakat, bu düşünceleri hep yeni arayışlara doğru
+          yönelmiştir. Bu yüzden uzun soluklu çalışmalar onları yorar. Kendilerini iyi eğitmiş ikizler hoş ve
+          zariflikleri ile yaşamı zevkli kılarlarken, eğitimsiz olanlar da yaşamı o kadar çekilmez hale getirirler.
+          Kendi paralarına karşı tutumlu davranmalarına karşın, başkalarının paralarını kolayca harcayabilirler.</p>
+        <h4 class="mt-5 mb-2 text-warning">Fiziksel Özellikleri:</h4>
+        <p>Güzel bir fiziğe sahiptirler. Uzun boy, biçimli bir beden, uzun kol ve bacaklar, koyu kumral saçlar,
+          kahverengi gözlere sahiptirler. Gözleri keskindir ve uzağı çok iyi görürler. Gözlemcilikleri çok güçlüdür</p>
+      </div>
+
+
+      <div class="d-flex mx-auto w-100 mt-4">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger me-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+          İkizler Kadını
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div id="modal-content1" class="modal-content bg-danger text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">İkizler Kadını Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>İkizler kadını için mantık çok önemlidir. Duygulardan önce mantığın gelişmesini bekler.Her şeyi
+                  dengede tutmaktan hoşlanır. Değişkenliği size ulaşılmaz gibi gelebilir. Eğer bu burçtan biri ile
+                  beraber olacaksınız, Onun değişimlerine hazır olmalısınız. Genelde ilgisiz ulaşılmaz ve zor
+                  görünürler. Siz nerde hata yaptığınızı düşünürken, o sizin takıntılarınızı anlamak bile istemez. Eğer
+                  siz, rutin ve tansiyonu düşük bir ilişki hayal ediyorsanız, kesinlikle İkizler kadınından uzak
+                  kalmalısınız. Hele kaybetmeye alışkın değilseniz, ona sakın yaklaşmayın. Belleği de güçlü sayılmaz.
+                  Her¬kesi heyecanlandıran bir tartışma esnasında birden saçı¬nızın yanlış yerden ayrılmış olduğuna veya
+                  yeni kazağı¬nızın yerdeki halıya uymadığına karar verebilir. Duygu-lar bakımından o da erkek İkizlere
+                  benzer. Flörtçü iz¬lenimi bırakır ve sevgilisini de çok üzer. Erkekler onu havai ve ne yapacağı
+                  bilinmez, biri olarak görür ama yine de beğenirler. Bu kadınla ilişki kurmayı isteyen kimse karşısında
+                  bir harem olduğunu bilmelidir. Yılın her günü başka bir kadındır o. Bu kadını beğenip beğenmemeniz de
+                  ona ayak uydurup uyduramamanıza bağlıdır tabii. İkizler kadını da, burcun erkeği gibi pek pratik biri
+                  değildir. Onun için kendisini çekip çevirecek birine ih¬tiyacı vardır. Ancak bunu belli etmeden yapmak
+                  gere¬kir. Zaten bu kadının durulup oturmasını yahut aşkı ciddiye almasını sağlamak yeteri kadar
+                  güçtür. Bu ka¬dının sağlığıyla da ilgilenmek gerekir. Onun temiz hava, egzersiz ve uygun besinlere
+                  gereksinmesi vardır</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal6">
+          İkizler Erkeği
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content bg-primary text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">İkizler Erkeği Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Hareketli ve değişken yapılarıyla dikkat çekmemeleri mümkün değildir.Sonsuz bir öğrenme isteği içinde
+                  oldukları için çevrelerine asla kayıtsız kalmaları mümkün değildir. Etrafınızda her an eğlenceli bir
+                  İkizler görmeniz mümkündür. Aşk yaşantıları daima bir soru işareti olup, kendisi dahil hiç kimse onun
+                  ne yaptığı konusunda belli bir fikri yoktur. Yaşam boyunca çevresini sorgulamaktan vazgeçmeyen bu
+                  ilginç kişilerin peşine takıldığınız zaman asla sıkılmaz hatta fazlasıyla eğlenebilirsiniz. Bir
+                  İkizler babası dünyanın en tatlı kişisidir. Çocukları için inanılmaz zevkli bir oyun arkadaşıdır.
+                  Çocukları büyüdükleri zaman bile onlara arkadaş muamelesi yaparlar. Sürekli babaları ile beraber olmak
+                  isteyen çocukları , onu her zaman yanlarında bulamayabilirler, Çünkü sürekli seyahat etmekten
+                  hoşlanırlar. . Bugün ona en çılgın hediyeleri alabilirsiniz. Orijinal spor ayakkabılar, kaliteli bir
+                  güneş gözlüğü, renkli tişörtler, bluejeanler ve bir seyahat çantasına hayır demez.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="yengec"></div>
+
+      </div>
+
+    </div>
+    <!-- İkizler BURCU BİTİŞ -->
+
+
+
+    <!-- Yengeç BURCU BAŞLANGIÇ -->
+    <div class="row border border-5 border-dark rounded-5 p-4 bg-dark text-white mt-5">
+      <h2 class="text-center block">Yengeç Burcu <small>(21 Haziran - 21 Temmuz)</small></h2>
+      <div class="col-12 mt-1 block">
+        <img class="rounded-circle" src="resimler/yengec-burcu-1-1.webp" alt="">
+        <h4 class="mb-2 text-success">Kişisel Özellikleri:</h4>
+        <p class="my-auto">Yaşamlarındaki her konuda aşırı bir şekilde hassas, alıngan ve kuruntulu olan Yengeç'leri
+          tanımlayan sözcük 'Hissederim' dir. Sorumluluk duyguları çok gelişmiştir. Her işte olağanüstü olan
+          ayrıntıcılıkları, işlerinde mükemmeliyetçiliği getirir. Ayni sorumlulukları karşılarındakilerden de beklerler.
+          Yengeç'ler duygusallıkları ve duyarlılıkları ile tanınırlar. Çevresindeki her insandan da ayni hassasiyeti
+          bekledikleri için, kolay geçinilir tipler değildir. İyi günlerinde neşeli, iyi kalpli, yardımsever, düşünceli
+          ve anlayışlıdırlar. Fakat herhangi belirgin bir neden olmadan somurtkan ve alıngan olabilirler. Yakınlarını ve
+          arkadaşlarını çok sevmelerine karşın, bunu pek belli etmezler. Kendilerini herhangi bir şekilde inciten
+          kişileri zor bağışlarlar ve yapılan hareketi asla unutmazlar. Yengeç'ler müziğe ve dinsel konulara karşı
+          ilgilidirler. Sabırlı olan Yengeç'ler tartışmalardan kesinlikle hoşlanmazlar. Duygularını sessiz bir şekilde
+          saklarlar.</p>
+        <h4 class="mt-5 mb-2 text-warning">Fiziksel Özellikleri:</h4>
+        <p>Gerçek Yengeç Burcu insanı fiziksel olarak; soluk, beyaz tenli, orta ve kısa boylu, yuvarlak yüzlüdür.
+          Gözleri genelde gri veya mavi gözlüdür. Saçları mat ve kahverengi olur.Yengeç kadınları tartışmasız çok
+          güzeldirler. Ay gezegenini simgeleyen güzel yüzleri vardır. Vücut yapıları gençliklerinde güzeldirler. Yaşları
+          ilerledikçe, dikkat etmezlerse kilolu tombul bir vücutları olur .</p>
+      </div>
+
+
+      <div class="d-flex mx-auto w-100 mt-4">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger me-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal7">
+          Yengeç Kadını
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div id="modal-content1" class="modal-content bg-danger text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Yengeç Kadını Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Yaşamın sakin bir limanı olan Yengeçler, karmaşık duygulara kapıldığı zaman onları tanımak
+                  güçleşir.Sevgi dolu şefkatli, bir o kadar ihtiraslı yapıları ile onu tanımanız her zaman mümkün
+                  olmayabilir. Kırılmaktan çok korkarlar. Partnerlerine kalplerinin kapılarını açmakta
+                  zorlanırlar.Geçmişten kolayca kopmadıkları için anıların yaşantılarında yeri çok fazladır ve kimsenin
+                  geçmişleri için, kötü bir söz söylemelerine izin vermezler.Bu anaç kadın, kendisine kol kanat geren
+                  güçlü bir erkek arar.Fakat ona hükmeden erkeklerden hoşlanmaz.Onun değişen duygusalllıklarına ayak
+                  uyduracak bir partnere ihtiyaç duyarlar. Macera yaşanacak bir kadın değildir.Aldatılmaya hiç gelemez.
+                  Eğer evcil bir yapıya sahipseniz bir Yengeç ömür boyu sizi mutlu edecektir. Rahatça sizi kucaklamasına
+                  izin verin.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal8">
+          Yengeç Erkeği
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content bg-primary text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Yengeç Erkeği Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Sakin ve dengeli yapıları onları bulundukları ortamın en sevilen kişisi haline getirir. Duygularını
+                  çok derin yaşadıkları için, gizemli bir tablo içinde yaşarlar. Sevilen ve aranılan insanlardır.
+                  Bulundukları ortamın şartlarına çok çabuk uyum sağladıkları için, asla şikayet etmezler ve edenlerden
+                  de hoşlanmazlar.Aile kavramı çok fazladır. İyi bir baba ve iyi bir eştir. Çocuklarına düşkün oldukları
+                  için, koruma içgüdüleri her zaman ataktadır. Alıngan oldukları için de kırıldıkları zaman kapılarını
+                  çok çabuk çevrelerine kapatırlar. Çeversine hep yaralı olmak istedikleri için de çoğu kez yanlış bir
+                  şekilde kullanılırlar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="aslan"></div>
+
+      </div>
+
+    </div>
+    <!-- Yengeç BURCU BİTİŞ -->
+
+
+
+    <!-- Aslan BURCU BAŞLANGIÇ -->
+    <div class="row border border-5 border-dark rounded-5 p-4 bg-dark text-white mt-5">
+      <h2 class="text-center block">Aslan Burcu <small>(22 Temmuz - 23 Ağustos)</small></h2>
+      <div class="col-12 mt-1 block">
+        <img class="rounded-circle" src="resimler/aslan-burcu-1-1.webp" alt="">
+        <h4 class="mb-2 text-success">Kişisel Özellikleri:</h4>
+        <p class="my-auto">Aslan kraldır, önderdir. Başkalarının yaşantılarını da onlar adına düzenlemek isterler. Her
+          şeye karışırlar, kibirlidirler. Bu nedenle onları tanımlayan sözcük 'Yönetirim' dir. Yaşam sahnesinde her
+          zaman parlayarak, odak noktası olmak isterler. Organizasyon güçleri çok fazladır. İsteklerini başkalarına
+          kabul ettirmek, onlar için yaşamlarının 'olmazsa olmaz' şartıdır. İyi zamanlarında etkileyici, güler yüzlü,
+          başkalarına yardım etmeyi seven ve bunu kendine görev sayan Aslan'lar sevimli ve iyimser kişilerdir. Ona karşı
+          hatalı davransanız bile, size olgun bir şekilde tepki verir. Fakat; Sabrı taştıktan sonra, dürüst ve mert,
+          gerektiğinde sert bir şekilde tavır gösterir. Zor günlerinde şansları onlara her zaman yardım eder. Yönetici
+          gezegenleri Güneş onları en karanlık günlerinde aydınlığa çıkarır. Eğitimsiz ve gelişmemiş Aslan tipleri
+          çekilmez olurlar. Her konuda sahip olduklarından daha fazlası varmış gibi davranırlar.</p>
+        <h4 class="mt-5 mb-2 text-warning">Fiziksel Özellikleri:</h4>
+        <p>Aslan burcunun tipik fiziksel özellikleri: Boyları genelde uzun ve kemikleri kalındır. Omuzlar geniş, kaslar
+          gelişmiştir. Açık renk saçlı, pembe beyaz tenli, büyük ve yuvarlak başlıdır. Gözleri iyi görür. Kadınları
+          saçlarını çok severler. Dış görünüşlerine çok önem vermeleri yüzünden, onları her an bakımlı görebilirsiniz.
+          Yürüyüşleri farklıdır ve girdikleri yerlerde gözle hemen üstlerinde toplanır. Fiziksel çekiciliğinin farkında
+          oluşu, onu daha gururlu ve ben merkezci yapar.</p>
+      </div>
+
+
+      <div class="d-flex mx-auto w-100 mt-4">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger me-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal9">
+          Aslan Kadını
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div id="modal-content1" class="modal-content bg-danger text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Aslan Kadını Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Son derece sadık, cömert ve yüce gönüllü olmalarına rağmen, evlilikte her zaman şanslı sayılmazlar.
+                  Hatta ilişkileri tuhaf bir şekilde biter. Yaşamlarında çoğu kez çocuklarıyla sorunları olur. ve bu da
+                  evliliklerinin gölgelenmesine neden olabilir. Gençlik yıllarında acemi aşkların avcısıyken, yaşınız
+                  ilerledikçe olgun aşkların görkemli yaratıcısı olur ve yalnız bir yaşamı asla düşünemez.. Duygulu
+                  romatik bile olsa, lüks yaşam arzusundan asla vazgeçemez. Hayatında daima ona eşlik edecek aşklar
+                  vardır. Seçimleri isabetli ve uygun kişiler olacaktır. Dürüst olduğu için de, hayatındaki kişiden
+                  bıksa bile onu terk etmeden yaşantısına başka bir kimseyi almaz.. Aslan kadınları gece hayatından ve
+                  görkemden hoşlanır. Siz de, her konuda bu özelliğkerini yansıtan kıyafetler ve eşyalardan almanızı
+                  isteyebilir. Takıların da yaşantılarında önemli bir yer tuttuğunu unutmayın.Bu kadın saygı duyduğu bir
+                  eşi olduğu zaman yaşantısındaki kişiyide mutlu edecektir.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal10">
+          Aslan Erkeği
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content bg-primary text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Aslan Erkeği Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Sıcak romantik, ateşli aşıklardır. Birlikte olduğu insanı ayaklarını yerden keser. İyi bir konuşmacı
+                  olduğu içinde, güzel aşk sözleri söylemekte üstlerine yoktur.Bulundukları her ortamda sevgi
+                  krallıklarını ilan etmeye hazırdırlar.Karşı cins çekici ve toplum içinde kendilerini belli eden
+                  kişilerdir.Cinsel açıdan yoğun yaşadıkları duygularını zor idare ederler.Aslan burcu kişisi
+                  partnerinden sürekli olumlu sözler duymaktan hoşlandıkları için, en küçük bir ilgisizlik karşısında
+                  tüm dengelerini yitirirler. Yaşamın karizmatik oyuncularıdır. Sizi seven bir aslan erkeğinden
+                  kurtulmanız o kadar kolay olmayacaktır. O sizi seçmiş ise ona direnmeniz faydasızdır. Farklı aşkların
+                  kahramanı olmaya eğilimlidirler. Güçlü yapılarını çocuklarınada yansıtarak, onların mükemmel olmasına
+                  çalışırlar. Aslan babası iyi bir baba olmanın tüm özelliklerini taşır.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="basak"></div>
+
+      </div>
+
+    </div>
+    <!-- Aslan BURCU BİTİŞ -->
+
+
+
+    <!-- Başak BURCU BAŞLANGIÇ -->
+    <div class="row border border-5 border-dark rounded-5 p-4 bg-dark text-white mt-5">
+      <h2 class="text-center block">Başak Burcu <small>(24 Ağustos - 23 Eylül)</small></h2>
+      <div class="col-12 mt-1 block">
+        <img class="rounded-circle" src="resimler/basak-burcu-1-2.webp" alt="">
+        <h4 class="mb-2 text-success">Kişisel Özellikleri:</h4>
+        <p class="my-auto">Yönetici gezegeninizden dolayı hep bilgiyi ararlar. Zekalarını kendilerine yardımcı olan bir
+          hizmetçi gibi görürler. Bu nedenle Başak burcunu tanımlayan sözcük 'İncelerim “ dir. Başak'lar çalışkan ve
+          pratik insanlar olup, yaşamlarındaki en önemli konu İş' tir. Güvendikleri kişilere yardım etmeyi sevmelerine
+          rağmen, inanmadıkları ve tembel olduklarını bildikleri kişilere karşı soğuk davranırlar. Yaşamları boyunca
+          dinlenmeden çalışırlar. Onların dinlenme biçimi bile başkalarına yorucu gelebilir. Başak'ların yaşamda
+          ayrıntılar arasında boğulma riskleri hep vardır. Böyle anlarda bile, kendi yöntemleri ile yaptıkları işlerde
+          gelişigüzel şeyler bulunabileceğini kabul etmezler. Başaklar, genellikle kendilerini hiç kimseye
+          kullandırtmazlar, sınırlarını belirleyerek 'hayır' demesini bilirler. Tutumlulukları bazen pintilik
+          derecesindedir. İçli-dışlı olmayı sevmedikleri için, soğuk ve mesafeli bir görünüşleri vardır.</p>
+        <h4 class="mt-5 mb-2 text-warning">Fiziksel Özellikleri:</h4>
+        <p>Başak burcunun tipik fiziksel özellikleri: Uzun bir boy, ince bir bel yüzü pembe beyaz veya esmerdir. Saçları
+          koyu renk ve genelde uzun olur. Sağlıklı saç tellerine sahiptirler. Gözleri insanın içini okur gibi baktığı
+          için de hemen onun etkisinde kalırsınız Farklı bir karizması vardır. Sistemli ve kuralcı yapıları dış
+          görünüşlerine de yansır. Onları asla dağınık ve gelişigüzel göremezsiniz. Kıyafetleri klasik fakat
+          etkileyicidir. Daima kaliteli yaşamaktan hoşlandıkları için, bütçelerini yansıtan hoş kıyafetleri kullanırlar,
+          fakat abartıya kaçmamak şartıyla.</p>
+      </div>
+
+
+      <div class="d-flex mx-auto w-100 mt-4">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger me-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal11">
+          Başak Kadını
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div id="modal-content1" class="modal-content bg-danger text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Başak Kadını Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Garip bir doğaları vardır. Az veya çok, kendilerine yeten tavırlarıyla evliliğe her zaman
+                  tepkilidirler.. Seçici ve eleştirici tutumlarıyla, aşkı sürekli kendilerinden sürekli uzaklaştırırlar.
+                  Hele evliliği hiç yaklaştırmazken, ilişkilerinde bencilliklerini ortaya koyarlar.. Eğer; bir gün
+                  gerçekten evlenmeyi isterlerse, ilişkilerini saygı ve mantık çerçevesinde yürütürlerdir.. Mükemmelliği
+                  arayan bir kişi olarak, seçtikleri eş onları fazlasıyla hak ederler.. Onlar da bunun farkındadır. Bu
+                  evlilikte, asla ayrılığa yer olmayacaktır. Kusursuz bir anne örneği oldukları için, çocuklarınında her
+                  konuda mükemmel olmasını isterler.. Ev ve iş yaşamı aynı derecede önemli olduğundan, her ikisini de
+                  başarılı bir şekilde götürürsünüz. Çocuklarıyla terbiyeli ve söz dinleyen çocuklar olacak ve saygılı
+                  bir şekilde ilişkileriniz yürüteceklerdir.. Klasik ve sade zevkleri vardır. Hedeflerini iyi seçerler.
+                  Başarı için hiçbir engel tanımazlar.. Tarafsız gibi görünseler de, taraf tutarlar. Tutkulu fakat kinci
+                  değildirler.. Duygu ve mantığı arasında müthiş bir denge yeteneği vardır.. İlişkilerinde çok severse
+                  taviz verirler.. Tenkit edilmeye gelemezler.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal12">
+          Başak Erkeği
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content bg-primary text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Başak Erkeği Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Yaşama sade bakan doğal ve samimi kişilerdir. Onlarla yaşamak kolay değildir. Çünkü disiplin duygusu
+                  içinde yaşadıkları için, birlikte oldukları kişilerin de yaşam düzenlerine karışırlar. Titiz ve
+                  sorgulayıcıdırlar. Amaçsız ve beklentisiz kişiler için, zaman harcamaktan hoşlanmazlar. İyi, bir aile
+                  reisi oldukları söylense de, bunu geciktirmek için her türlü yolu denerler ve müzmin bir bekar
+                  olmaktan kurtulamazlar. Aşk ilişkileri zordur..Sürekli denetleme duyguları yüzünden partnerleriyle
+                  aralarında sürekli sorun çıkar. Baba oldukları zaman da bu duyguyu geç tatmanın keyifsizliğini
+                  duyarlar. Onları en iyi koşullarda yetiştirmek için ellerinden gelen her şeyi yaparlar . Çocukları
+                  onların düzenlerinden sıkılsa bile en küçük sorunlarında yanlarında, babalarını görmekten keyif
+                  alırlar. Temkinlidirler ve hata yapmaktan çekinirler. Mükemmel olmak için her türlü olanakları sonuna
+                  kadar savunur ve kullanırlar. Yapmak istedikleri ile hayalleri arasında uçurum yoktur. Dünyayı kendi
+                  kişisel çerçevesinden görmeye alışkındırlar. Duygusal istekleri ve arzuları ön plandadır..Sabit
+                  düşünme konusunda ısrarcı ve ödün vermedikleri için kendini zorlayacak konular ortaya çıkacaktır.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="terazi"></div>
+
+      </div>
+
+    </div>
+    <!-- Başak BURCU BİTİŞ -->
+
+
+    
+
+    <!-- Terazi BURCU BAŞLANGIÇ -->
+    <div class="row border border-5 border-dark rounded-5 p-4 bg-dark text-white mt-5">
+      <h2 class="text-center block">Terazi Burcu <small>(24 Eylül - 23 Ekim)</small></h2>
+      <div class="col-12 mt-1 block">
+        <img class="rounded-circle" src="resimler/terazi-burcu-1-1.webp" alt="">
+        <h4 class="mb-2 text-success">Kişisel Özellikleri:</h4>
+        <p class="my-auto">Kararsızlıkları ile ünlü cazibe sembolü karşınızda duruyor. Nedenini bilmediğiniz bir çekim
+          gücü etkisi altına girdiğinizi fark ettiğinizde iş işten çoktan geçmiş olacaktır. Onların büyülü bir havası
+          vardır. Ritmik hareketleri ile dans eder gibi bir yaşam sürer. Onun yanında kızgınlıklarınız yok olur. En
+          sinirli anınızda bile sizi regüle etme yeteneğine sahiptir. Üstelik, tartışmayı sevmesine rağmen; bu kadar
+          ustalıkla konulara hakim olup, sonrada sesini hiç yükseltmeden zaferini ilen eden çok az kişi vardır. Bir
+          Terazi bunu başarır. Sizin kılıç salladığınız ortamlarda, o; gülücüklerini, zarafetini ve öpücüklerini
+          gönderecektir. Kafasında müthiş bir denge vardır. Onun ne düşündüğünü bilemezsiniz. Uyumlu ve sevecen
+          yapısının altında gizli bir güç vardır. Bulunduğu ortamları çok çabuk inceler ve gizli detayların nerede saklı
+          olduğunu bulmaya çalışır. Konuya hakim olmak için deliler gibi çalışmak ve kendini harap etmek yerine, keskin
+          görüşlerini ve doğru mantığını kullanacağı ortamları seçer. Başarılı olmak için imkansızlığı değil, kendini
+          yüceltecek elle tutulur konular üzerinde uyumlu bir sessizlikle çalışır. Yaptığı işlerin doğruluğuna inandığı
+          halde, onay beklemekten de kendini alamaz. Onu tenkit etme gibi bir şansınız asla olamaz. Böyle bir şeye
+          kalkıştığınız taktirde; size tüm zarafetiyle gülümseyecek, önerilerinizi can kulağıyla dinleyecek ve sonunda
+          kibarca teşekkür ederek sizden uzaklaşacaktır. Fakat bir daha asla sizin fikrinizi sormayacaktır. Gülümseyen
+          çehresinin altında müthiş bir ego gizlidir, aşk ve sanat onun yaşam öğeleridir. Dünyada her şeyden
+          vazgeçebilir, fakat kişiliğini besleyen ve duygusallığını yansıtan soyut kavramlarından vazgeçemez. Akıl,
+          mantık, aşk işte karşınızda her şeyiyle özel bir kişi duruyor. Onun terazilerinin kefesinde yer almak
+          istiyorsanız, belli standart ölçülerin çok üstünde olmanız gerekir. Kolay bir insan olmadığını şimdiden
+          hatırlatırız.</p>
+        <h4 class="mt-5 mb-2 text-warning">Fiziksel Özellikleri:</h4>
+        <p>Terazi burçlarının fiziksel yapıları çok güçlüdür. Zodyak’ın en güzel kişileri diyebiliriz. Uzun boylu, ince
+          vücutlu, düz kahverengi saçlı, yuvarlak yüzlü, beyaz tenli ve koyu renk gözlüdürler. Terazi bir denge
+          burcudur. Önemsiz bir dengesizlik hassas vücutlarını alt üst etmeye yeterlidir. Hastalıkları sırasında yoğun
+          ilgi beklerler. Aradıkları ilgiyi bulamadıkları zaman, huysuzlaşarak daha çok hastalanırlar. İç dünyasında
+          dalgalanmalar yüzünden, baş ağrısı ve aşırı yemek eğilimi gösterirler. Sinir sistemleri midelerini etkilediği
+          için midedeki asit fazlalığını fosfor içerikli yiyeceklerle dengelemelidirler. Terazilerin metabolizması çok
+          yavaş çalışır. Baharatlı, soslu, şekerli gıdalara düşkün olması nedeniyle, çok fazla kilo almaya müsaittir.
+          Yaşam boyunca sürekli egzersiz yapmak zorundadır, aksi taktirde ileri yaşlarda şişmanlık kaçınılmaz olur.
+          Terazi insanları; yapılı, fakat çok çabuk hastalanan kişilerdir. Sağlıklı görünüşlerine karşın, soğuk
+          algınlıklarına çok çabuk yakalanırlar. Terazileri; böbrekler, bel bölgesi, sırt ve omurgaları simgeler.
+          Ayrıca, Venüs etkisinde oldukları için troidler düzensiz çalışabilir. Kilo problemi olan Terazilerin, ara sıra
+          hormon testleri yaptırmaları gerekebilir. İleri yaşlarda romatizmal rahatsızlıklara aday kişilerdir.
+          Terazilerin, herkesten daha çok kendilerine özen göstermeleri gerekiyor ki, zaten çoğu bu konuda duyarlı
+          olurlar. Kendilerine özen gösteren insanlar en çok bu burçtan çıkar.</p>
+      </div>
+
+
+      <div class="d-flex mx-auto w-100 mt-4">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger me-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal13">
+          Terazi Kadını
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal13" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div id="modal-content1" class="modal-content bg-danger text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Terazi Kadını Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Terazi burcu kadınlarının çoğu, karşılarına en ufak bir fikir tartışması olanağı çıktığı zaman,
+                  keskin zekalarını göstereceklerdir.Teraziyle tartışmaya girmek istemezseniz, o kendi kendiyle
+                  tartışacaktır. Bir terazi kızı tek başına kavgayı başlatabilir ve büyük bir zevkle sürdürebilir ve
+                  yine kendisi sonuçlandırabilir. Ona göre her şey sonunda eşitlenir. O daima haklıdır ve sonunda son
+                  kararları o verecektir.Terazi kadını adil değilse, dünyada hiçbir şey eşit değildir. Onun çekiciliği
+                  ve dayanılmaz tebessümü diğer kadınlardan çok farklıdır. Açık ve berrak bir mantıkla sizi daima
+                  kendine inandıracaktır. O bir Venüs kızıdır. Hayatı güzel ve zevkli yaşamak, ve satın alabileceği tüm
+                  güzel şeyleri ister. Onların büyük paralara ihtiyaçları vardır. Lüksü, pahalı giysileri, parfümleri ve
+                  kendini güzel hissettirecek eşyalara sahip olmak isterler. Bir terazi kadını asla aşksız yaşayamaz.
+                  Gerek iş hayatında, gerek özel yaşamında daima romantik bir ilişkiye ihtiyaç duyar. Özellikle seveceği
+                  bir erkeğin özlemini çeker. Terazi kadının hakkını vermek zorundasınız. O Zodyak’ın herkese nasip
+                  olmayacak özel bir dişisidir. Zaman zaman, dengelerini kaybedebilir. Çünkü, duygusal dünyası daima
+                  karışıktır. Özlemlerini ve isteklerini karşılayamadığı zaman kaprisli yönleri ortaya çıkar. Aşk
+                  ormanlarının romantik gezilerine daima ihtiyaç duyarlar. Uygun partner buluncaya kadar, gönül
+                  kapılarını daima açık tutarlar. Yüzleri güzel duru ve sevecendir. Bakışları anlayış doludur.
+                  Gözlerinin içi güler. Orantılı bir vücuda sahip olmalrına karşın, hafif etine dolgun hatları yaşları
+                  ilerledikçe hantallaşabilir. Giyim konusunda çok zevklidirler, cezbedici ve cüretkar giyinmekle
+                  beraber, asla bayağı olmazlar. Gerçek bir diplomattır. Nerede ne yapacağını bilir. Nezaketi ve
+                  inceliği ona tüm kapıları açar. İşleri ne olursa olsun, asıl işleri yaşamı ve çevresini
+                  güzelleştirmektir. Hayatın hep güzel yanlarını görmek isterler. Evliliği dostça yapılan bir ortaklık
+                  olarak görürler. Yalnız kalmaktan hiç hoşlanmazlar. İnsan ilişkilerine çok önem verirler.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal14">
+          Terazi Erkeği
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal14" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content bg-primary text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Terazi Erkeği Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Bu adamdan pek çok öğüt alacaksınız. Sorunlarınızı büyük bir zevkle dinleyecek ve ve size yardımcı
+                  olmak için tüm olanaklarını kullanacaktır. Sizi o eşsiz mantık gücünün etkisi altına alacaktır. .İkna
+                  kabiliyeti çok yüksektir. Onunla birlikteyken, eski hayal kırıklıklarınızı unutacaksınız. Size
+                  gülümsediği anda, tüm dünyanın ayaklarınızın altında olduğunu hissedecek ve, sanki içinizden bir
+                  şeyler kopacak ve onun mıknatıs kişiliği altında kendinizi çok farklı dünyalar içinde
+                  bulacaksınız.Fakat Venüs’ün etkisinde olan bu erkekle, aşkınızın sonsuza kadar süreceğine inanacak
+                  kadar saf olmayın. O, sizi üzmeden ve kırmadan kaçmaya çalışabilir. Çünkü, ilişki kan kaybetmeden
+                  uzaklaşmak ve aşkını hep en güzel anılarıyla hatırlamak isterler. Bir terazi erkeği yüz yaşına gelse
+                  bile,karşı cinse ilgisini kaybetmeyeceği için, çevresi daima kalabalık ve kadınlarla çevrili
+                  olacaktır. Zodyakın aşk yapma sanatını çok iyi bilen bu erkeğin karşında hiçbir kadın ilgisiz
+                  kalamayacağı muhakkak. Fakat işin ilginç yönü, ayrıldığı sevgilileri ile dost ve arkadaş kalabilen,
+                  ender kişilerdir. O, daima size saygılı davranacak ve hiçbir işinize burnunu sokmayacaktır. Sizin tüm
+                  sırlarınızı öğrenmek gibi bir merakı yoktur. Eğer siz, böyle bir şeye yeltenirseniz, oldukça şaşıracak
+                  ve güvenilmediği duygusuna kapılarak, size kırılacaktır. Terazi erkeği, aynı zamanda yaşamın iyi bir
+                  yargıcıdır. Onun inançlarına saygı göstermek zorundasınız. Çünkü, onlar için yalan son derece iğrenç
+                  ve berbat bir olaydır. Böyle bir duygu insan bedenini ve ruhunu kirleten bir şeydir. Analaşılmadığı
+                  zaman, ruhunun derinliklerinde gizli bir acı yaşar. İncindiği zaman, nazikçe sizden uzaklaşır.İşte tüm
+                  bu özellikleri Terazi erkeğini farklı kılar. Terazi erkeğinin sosyal çevresinde bol bol zeki ve akıllı
+                  insanla olacaktır. Para konusunda eli sıkı biri değildir. Dostlarını en iyi şekilde ağırlamasını
+                  bilir. Sanat ve entellektüellik taşıyan konular ilgisini çeker. Kalabalık ve kapalı yerlerden sıkılır.
+                  Nezih ve kaliteli ortamları tercih ederler. Ruhsal dengelerini korumak için gerçekten her şeyin uyum
+                  içinde olmasını isterler. Eğer bir Terazi erkeğine aşık olursanız, hemen vakit kaybetmeden gidin ve
+                  teklifinizi ona yapın. Sizi gerçekten beğenmişse belki biraz naz yapacaktır. Fakat onu duygu
+                  kararsızlıklarından kurtarmış olursunuz.. Sizi gerçekten beğeniyorsa, oda bu teklifiniz karşısında
+                  rahatlayacaktır. Çünkü bu zarif adam, aşk konusunda ilk adımı atacak kadar cesur değildir.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="akrep"></div>
+
+      </div>
+
+    </div>
+    <!-- Terazi BURCU BİTİŞ -->
+
+
+
+    <!-- Akrep BURCU BAŞLANGIÇ -->
+    <div class="row border border-5 border-dark rounded-5 p-4 bg-dark text-white mt-5">
+      <h2 class="text-center block">Akrep Burcu <small>(24 Ekim - 22 Kasım)</small></h2>
+      <div class="col-12 mt-1 block">
+        <img class="rounded-circle" src="resimler/akrep-burcu-1.webp" alt="">
+        <h4 class="mb-2 text-success">Kişisel Özellikleri:</h4>
+        <p class="my-auto">Akrepler kadar yaşamda tutkuyla yaşayan az insan vardır. Bu nedenle onları simgeleyen sözcük
+          'Arzuluyorum' dur. Hiçbir şeyi yarım bırakmazlar. Akreplerin güçleri gözlerinden okunur. Mimiklerini kontrol
+          altında tutsalar bile, bakışları ile sevgilerini ya da nefretlerini aktarabilirler. Duygularına kapılırlarsa,
+          tehlikeli olabilirler. Akrep'ler ukala ve kendini beğenmiş insanları sevmezler, onları aşağılayarak hadlerini
+          bildirirler. Kendi bildiklerini okuyarak, uzlaşmaya yanaşmazlar. Aşırı bir şekilde kuşkuculardır, kolay
+          inanmazlar ama inandıkları bir konuyu da sonuna kadar inatla savunurlar. Çalışmalarında sabır ve özenle
+          çalışırlarken, gösterişten uzak bir şekilde işlerini yaparlar. Kendilerini yetiştirmemiş Akrep'ler, yaşamın
+          basitliklerine yatkınlıkları ile kendi kendilerinin yok oluşlarına neden olurlar. Cinsellik yaşamlarında
+          önemli bir yer tutar. Ölümü yeni bir başlangıç olarak kabul ettiklerinden, ölümden korkmazlar..</p>
+        <h4 class="mt-5 mb-2 text-warning">Fiziksel Özellikleri:</h4>
+        <p>Akreplerin fiziksel yapıları oldukça ilginçtir; orta yada daha uzun boylu olabilirler. Kalın fakat düzgün bir
+          bedenleri vardır. Yuvarlak yüzleri olur. Saçları koyu renk ve dalgalı, hatta kıvırcıktır. Gözleri inanılma
+          çekicidir. Baktıkları her şeyi adeta eritirler. Bir Akrebi bakışlarından kolayca tanıyabilirsiniz. Zodyak’ın
+          en anlaşılmaz burcudurlar. Çoğu kez eleştiriye maruz kaldıkları için, kendilerini savunmaktan vazgeçmişlerdir.
+          Duyguları çok derindir. Gizemli yapıları onları bulundukları ortamda farklı yerlere getirirler. Duyumsamaları
+          yakıcıdır. Yoğun duyguları, kıskançlıklarını sürekli körükler. Hırslı yapıları yüzünden en zor hastalıklar
+          gelip onları bulur. Bir Akrep hastalandığı zaman, teşhis edilmesi zor tahlillere gerek duyulabilir. Uzun
+          araştırmalar sonucu hastalıkların nedeni genelde psikosomatik kökenlidir. Açığa çıkaramadıkları duyguları
+          yüzünden bedenlerini harap ederler. Akreplerin cinsiyet hormonları herkesten çok daha fazla çalışır.
+          Vücutlarındaki elektriksel potansiyel nedeniyle, bulundukları ortamda insanları kendilerine mıknatıs gibi
+          çekerler.. Hastalık konusunda sabırsızdır. Acıya onun kadar dayanıklı çok az kişi görülür. Alınabilecek en
+          etkili ilaçları hiç çekinmeden alırlar. İradelerine çok güvenir ve beyin gücü ile kendilerini iyileştirirler.
+          Akrepler mide ve üreme organlarını temsil ettiği için, bu organları hassastır fakat her türlü rahatsızlığın
+          üstesinden kolay gelirler.</p>
+      </div>
+
+
+      <div class="d-flex mx-auto w-100 mt-4">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger me-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal15">
+          Akrep Kadını
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal15" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div id="modal-content1" class="modal-content bg-danger text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Akrep Kadını Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Siz aşırılıkların ve aşırı uçların insanlarıdır.. Bu özelliklerini bildikleri için, kendileriyle
+                  ilgili yorum yapma ihtiyacı bile duymazlar. . Bir Akrep olarak; asla güçsüz biriyle evlenmez, ancak
+                  üstün kişilikte birine teslim olurlar. Güçlü karakterleri, ve garip adalet duygularıyla onları
+                  anlayabilecekleri bir eş olabilmek de herkesin harcı değildir Zevkli ve seçici zevkleri vardır.
+                  Güzellikler hep karanlıklarda gizli olduğu için, imkansız olan şeylerden hoşlanırlar.. Sınırlarınız
+                  çok geniş olup, sevdiğiniz şeyleri özel olarak keşfetmek gerekir.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal16">
+          Akrep Erkeği
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal16" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content bg-primary text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Akrep Erkeği Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Derin bir duygu insanıdırlar. Olaylara güçlü bir mantıkla yaklaştıkları için, onlara her konuda
+                  güvenilir. Hafızaları çok kuvvetlidir. Bir konuyu bir kez söylemek yeterlidir. Hatırlatılmaktan nefret
+                  ederler. Asla yüzeysel bir kişi olamazlar. Çocukları ile iletişim kurma konusunda, ketumdur. Onlardan
+                  güçlü bir kişilik, yaşama karşı dayanıklı olmalarını bekler. Bir av tüfeği, deri bir evrak çantası,
+                  sert bir traş losyonu, güzel bir ajanda. Deriden yapılmış her türlü eşyayı sever.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="yay"></div>
+
+      </div>
+
+    </div>
+    <!-- Akrep BURCU BİTİŞ -->
+
+
+
+    <!-- Yay BURCU BAŞLANGIÇ -->
+    <div class="row border border-5 border-dark rounded-5 p-4 bg-dark text-white mt-5">
+      <h2 class="text-center block">Yay Burcu <small>(23 Kasım - 21 Aralık)</small></h2>
+      <div class="col-12 mt-1 block">
+        <img class="rounded-circle" src="resimler/yay-burcu-1-2.webp" alt="">
+        <h4 class="mb-2 text-success">Kişisel Özellikleri:</h4>
+        <p class="my-auto">Kavrama yetenekleri gelişmiş olduğundan becerikliliklerinin de katkısı ile ele aldıkları her
+          işte, özellikle ciddi işlerde ve felsefe konularında başarılı olurlar. Bu nedenle Yay Burcunu tanımlayan
+          sözcük 'Görüyorum' dur. Yay burcu insanları içtenlikleri ve iyimser yaşam görüşleri ile tanınırlar.
+          Gençliklerinde dikkatsiz, heyecanlı ve geleneklere aykırı davranışlar içinde olsalar da, geçmiş
+          yanılgılarından en çok ders alan kişiler bu burçtan çıkar. Özgürlüklerine aşırı düşkün, patavatsızlık
+          derecesinde pratik insanlardır. Yay'ların yaşam çerçeveleri herhangi bir şekilde kısıtlandığı zaman, içsel bir
+          biçimde alt üst olurlar. Akılsızca risklere atılırlar. Yayların hayatı yeniliklere olan merakları ile
+          karakterize edilebilir. Bilmedikleri şeyleri araştırıp, keşfetmeyi severler. Yaylar çok yönlü ve ayni anda
+          ilgilenebilecekleri birkaç konu olduğunda mutlu olan kişilerdir. Kendilerini yorgun hissediyorlarsa, o konudan
+          sıkılmış demektir.</p>
+        <h4 class="mt-5 mb-2 text-warning">Fiziksel Özellikleri:</h4>
+        <p>Uzun boy, ince ve yağsız beden, çekici bir yüz, kahverengi saçlar, pembe-beyaz tenleri vardır. Kendilerine
+          daima güvenen ve iyimser yüzleri bakışlarına yansımıştır. Parlak ve çekici bir gülümseyiş şekilleri vardır.
+          Sıra dışı ve farklı giyinmekten hoşlandıkları için, onları fark etmemek mümkün değildir. Çocuksu yapıları ile
+          asla büyümezler.</p>
+      </div>
+
+
+      <div class="d-flex mx-auto w-100 mt-4">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger me-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal17">
+          Yay Kadını
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal17" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div id="modal-content1" class="modal-content bg-danger text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Yay Kadını Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Yay burcu kadını öncelikle gerçekten kültürlü bir kişiliğe sahiptir. Bu özellikleri ile her ortamda,
+                  her insanın dikkatini çekmeyi başarabilirler. Espri yetenekleri oldukça iyidir ve kendisi neşeli
+                  olduğu gibi insanlara da neşe verirler. Bu nedenle yay burcu kadını sevilen ve aranılan bir kadındır.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal18">
+          Yay Erkeği
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal18" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content bg-primary text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Yay Erkeği Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Yay burcu erkeği entelektüel bir kişiliğe sahiptir. Kibar, son derece bilgili ve beyefendi bir
+                  erkektir. Hayatının her alanında bu şekilde yaşamak ister. Aslında bu durumun onlar için çok
+                  önemlidir. Renkli, sevecen ve ılımlıdırlar. Cana yakın davranışları ile insanlar tarafından sevilen
+                  bir erkektir.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="oglak"></div>
+
+      </div>
+
+    </div>
+    <!-- Yay BURCU BİTİŞ -->
+
+
+
+    <!-- Oğlak BURCU BAŞLANGIÇ -->
+    <div class="row border border-5 border-dark rounded-5 p-4 bg-dark text-white mt-5">
+      <h2 class="text-center block">Oğlak Burcu <small>(22 Aralık - 20 Ocak)</small></h2>
+      <div class="col-12 mt-1 block">
+        <img class="rounded-circle" src="resimler/oglak-burcu-1-2.webp" alt="">
+        <h4 class="mb-2 text-success">Kişisel Özellikleri:</h4>
+        <p class="my-auto">Geleceği ayrıntılı biçimde planlamaya çalışan Oğlak'lar bu özellikleri nedeniyle sık sık
+          kuruntulara kapılarak, depresyona girerler. İşleri ile aşırı meşgul olduklarından, insanlarla zor ilişki
+          kurarlar. Fakat, hiçbir zaman kendilerini yalnız hissetmezler. Bu nedenle onları tanımlayan sözcük
+          'Kullanırım' dır. Oğlaklar ciddilikleri, tutuculukları ve güçlü iradeleri ile tanımlanırlar. Çalışkanlıkları
+          ile kolaylıkla başkalarının saygısını kazanırlar. Gerçek bir Oğlak'ın iki temel özelliği vardır. Güvenilirlik
+          ve dürüstlük. Çok gelişmiş bir görev duyguları vardır. Bazen başkalarının başarısızlıklarını abartırlar.
+          Oğlaklar arkadaşları ile ilgili çok iyi sırdaş olurlar, para konusunda dikkatli olmalarına rağmen, eli açık
+          insanlardır. Geleneklere bağlı kişiler olduklarından, duygusal özgürlüğü anlamakta güçlük çekerler. Bu nedenle
+          kendilerinden yaşça küçük kişilerle bazen sürtüşmeleri olur. Sürekli somut konularla uğraşmayı severler,
+          doğada bulunan olaylardan örneklemelerle işlerini başarılı bir şekilde yürütürler. Bu yüzden ruhsal olarak da
+          doyumlu kişilerdir. Olayları organize ederlerken rahatlıklarını gözetirler ve kendilerinin zevklerine uygun
+          olmasına önem verirler. Bu özellikleri evlerine de yansır.</p>
+        <h4 class="mt-5 mb-2 text-warning">Fiziksel Özellikleri:</h4>
+        <p>Fiziksel özellikleri; kısa boy, ince yapı, uzun ince bir yüz. Uzun belirgin bir çene. Saçlar genelde
+          siyahtır. Beden dar ve uzun bacaklara sahiptirler. Dizleri genelde çıkıntılıdır. Güzel bir yüz yapıları
+          vardır. Fotojenik oldukları için model dünyasında sık sık Oğlaklara rastlarız. Ciltleri yıllar geçtikçe daha
+          genç olur Soğuk görüntüleri onları ulaşılmaz bir hava estirse de, kendilerine güvenen bir tablo da, ortaya
+          çıkarır. Kendinden emin tavırlarıyla herkesi kendine hayran bırakmasını bilir.</p>
+      </div>
+
+
+      <div class="d-flex mx-auto w-100 mt-4">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger me-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal19">
+          Oğlak Kadını
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal19" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div id="modal-content1" class="modal-content bg-danger text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Oğlak Kadını Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Yaşamlarında gerçek aşkın sadece mantık süzgecinden geçtiğine inandıkları için, isteklerine kavuşmak
+                  için idealleri için yaşarlar. İstemeseler de ön yargılı olmaktan kendilerini alamazlar. Birlikte
+                  olduğu kişi sürekli mükemmel görmek istedikleri için, partnerlerini tenkitleriyle yaşamlarından
+                  bezdirebilirler. Yüksek standartları zamanla kendileriniz de rahatsız eder Yaşamı ve aşkı ciddiye
+                  alan, ender kişilerdendir. Romantizmde bile gerçeklerden fazla uzaklaşmaz ve duygularını herkesten
+                  daha gerçekçi yaşarlar Güvendikleri kişilere yardım etmeyi sevmelerine rağmen, inanmadıkları ve tembel
+                  olduklarını bildikleri kişilere karşı soğuk davranırlar. Yaşamları boyunca dinlenmeden çalışırlar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal20">
+          Oğlak Erkeği
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal20" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content bg-primary text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Oğlak Erkeği Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Ketum ve ciddi tavırları ile tanınan bir Oğlak erkeğinin yumuşacık bir kalbi vardır.Dışardan görülen
+                  görüntüsünün altında çekingen ve duygusal bir kişilik yatar. Aklı başında ve güvenilirdir.Çevresinde
+                  olup bitenleri, mantık çerçevesinde gözlemler. Sert bir mantıkla yaklaşır ve sonuç her zaman
+                  doğrudur.Sakin ve sade kişilerdir. Olayları abartmadıkları için de bazı kişilere renkli
+                  gelmeyebilirler. Aile kavramları çok önemlidir ve klasik bir anlayışları vardır Seçtikleri eş
+                  toplumsal ve geleneksel kurallara uygundur.İyi bir babadırlar. Fakat soğuk bir yaklaşım tarzları
+                  olduğu için, daima çocukları ile aralarında belli bir mesafe vardır. Onları yaşama erken öğretmek için
+                  çabalarlar. . Aşırı bir şekilde kuşkuculardır, kolay inanmazlar ama inandıkları bir konuyu da sonuna
+                  kadar inatla savunurlar. Çalışmalarında sabır ve özenle çalışırlarken, gösterişten uzak bir şekilde
+                  işlerini yaparlar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="kova"></div>
+
+      </div>
+
+    </div>
+    <!-- Oğlak BURCU BİTİŞ -->
+
+
+
+    <!-- Kova BURCU BAŞLANGIÇ -->
+    <div class="row border border-5 border-dark rounded-5 p-4 bg-dark text-white mt-5">
+      <h2 class="text-center block">Kova Burcu <small>(21 Ocak - 18 Şubat)</small></h2>
+      <div class="col-12 mt-1 block">
+        <img class="rounded-circle" src="resimler/kova-burcu-1.webp" alt="">
+        <h4 class="mb-2 text-success">Kişisel Özellikleri:</h4>
+        <p class="my-auto">Hayal güçleri sınırsız olmakla birlikte, düşünceleri bulundukları anın ötesinde, akılcı ve
+          sezgiseldir. Kova 'lar dik kafalıdırlar. Kendilerini dinleyenlerin ne demek istediklerini anlamadıklarını
+          sanırlar. Kovaları tanımlayan sözcük 'Biliyorum' dur. Kova burcu insanları sevecen tavırları ile tanınırlar.
+          Bu kişiler bencil değildirler. Irk, cinsiyet ve sosyal durumuna bakmaksızın, herkesin ayni olanaklara sahip
+          olmasını isterler. Modern görünüşlerine karşın, inatçı ve sabit fikirli olurlar. Onlara yaklaşmak çok zordur,
+          çünkü ne kadar dostça davranırlarsa davransınlar, arada her zaman bir mesafe bırakırlar. Kişisel özgürlükleri
+          onlar için o denli önemlidir ki, bu yüzden en yakın ilişkilerini kesip atabileceği gibi, yine özgürlükleri
+          adına her türlü özveride bulunurlar. Bu yüzden Kovalara aile yaşamı biraz zor gelir. Çoğu zaman yeni bir
+          şeyler keşfetmek için uğraşıda bulunurlar. Belli ilkeleri sonuna dek savunmaları onları hiç rahatsız etmez.
+        </p>
+        <h4 class="mt-5 mb-2 text-warning">Fiziksel Özellikleri:</h4>
+        <p>Kova burcunun fiziksel özellikleri: Orta ve uzun bir boy, düzgün bir beden, açık sarı saçlar, koyu renk
+          gözler en belirgin özellikleridir. Özellikle Kova kadınlarının yüzleri çok güzeldir. Yaşlanıncaya kadar
+          kendilerine bakarlar. Metabolizmaları çok hassastır. Doğal ilaçlar vücutlarında daha iyi etki yapar.
+          Biyoenerji, Akapunktur, Homeopati, alternatif tedavi yöntemleri ilgilerini çeker. Bir anda başlayan hızla
+          iyileşen, ve iz bırakmadan ilginç bir şekilde ortadan kaybolan hastalıklara yakalanabilirler. Bilekleri çok
+          hassas olan Kovaların, spor yaparken dikkatli olmaları gerekiyor. Ayakkabı seçerken dikkatli davranmalılar.
+          Aynı anda bir çok şeyi yapmaya kalkarlar. Spor yaşamlarında önemli bir yer tutmalı, yoksa elektriksel
+          enerjilerini boşaltma konusunda zorluk çekebilirler.</p>
+      </div>
+
+
+      <div class="d-flex mx-auto w-100 mt-4">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger me-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal21">
+          Kova Kadını
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal21" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div id="modal-content1" class="modal-content bg-danger text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Kova Kadını Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Özgürlükleri için savaş verirken en güzel aşkları yaşar ve evlilik dönemeçlerinden hızla dönerken,
+                  geride kalanları umursamazlar.. Dost yanlısı yapılarıyla çevreleri öylesine kalabalıktır ki; bazen
+                  aşkla dostluğu birbirine karıştırır ve en sonunda, onları okul yıllarından tanıyan biri ile sürpriz
+                  bir evlilik yaparlar. Sonuç, genellikle yanlış bir karar ve boşanma ile sonuçlanan birliktelik. Yine
+                  de bu kadar ümitsiz değil tabii.. Onlar aslında hem değişen ve yine de aynı kalabilen ender
+                  kişilerdir.. Bir Kova kadınıyla yaşamak son derece eğlenceli ve hareketlidir. Anne olmayı pek
+                  beceremezler. Çocuklarına daha küçük yaşlarda büyük gibi davrandıkları için, onların yeteneklerini
+                  çabuk keşfeder ve bir abla gibi onlarla ilgilenirler. Çocukları kova annelerini çok sever ve onların
+                  her anlattığı şeyi ilgiyle dinlerler. Yaşamın her türlü sürprizine açık kişilerdir. Konuşma tarzı
+                  pratik ve direk olup zaman kaybetmekten hoşlanmazlar. İyi bir eğitim almış ve bilgisini yerinde
+                  kullanan bir kişiliğe sahipse yaşamı oldukça keyifli algılarlar.. Akademik kariyer yapmaya müsait bir
+                  zihin kapasiteleri vardır. Aşk yaşantısı karışık fakat isteklerinde sabittirler. Günün değişen
+                  koşullarına hızlı bir şekilde geçerler ve zevklerinde değişimler onları zorlamaz. Gerçek dostlarından
+                  asla vazgeçmezler Çocukluk anılarına bağlı ve hala bazı küçük eşyalarını korumakta ısrarcıdırlar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal22">
+          Kova Erkeği
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal22" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content bg-primary text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Kova Erkeği Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Zeki ve akıllı kişilerdir. Yaşamı asla şakaya almazlar. Olayları akıllıca değerlendirdikleri için
+                  anlaşılması zor kişilerdir. Ne yapacakları ve nerede olacaklarını kestirmeleri çok zordur. Hiç
+                  kimsenin düşünmediği olayları yaşadıkları için de, çevreleriyle aralarında görünmez bir perde
+                  oluştururlar. Yaşama pratik bakarlar. Bulundukları ortamın çok ilerisinde düşünürler. Çevrelerinde
+                  beğenilen ve saygı duyulan kişilerdir. Olayları gerektiğinden daha hafife alıp, panik olmadıkları
+                  için, politik yaklaşımlar geliştirerek, kestirmeden sonuca ulaşırlar. İşler iyi giderken, her şey
+                  kontrolleri altındadır. Hayatlarında çelişkiye neden olan insanları görmezlikten gelirler. Cesaret ve
+                  rahatlıkları, bazen çizmeyi aşan sorunlara neden olur. Oyuncu yetenekleri çok gelişmiş olduğu için,
+                  bazen toplum karşısında da rol yapabilirler. Öğrenme kabiliyetleri çok yüksektir.. Mükemmeliyetçi
+                  yapılarından dolayı, sert bir görünüm sergileseler de, zevkine ve konforuna düşkündürler Temkinli,
+                  sağlamcı hatta kuşkucu yapıları onların başarıya gitmesindeki en büyük etkendir.. Ayrıntılara çok önem
+                  verirler fakat, yaşadığı duygusal kırıklıkları belli etmezler. Çocuklarla arası daima iyidir ve onlara
+                  anlatacak çok şeyleri vardır. Elektroniğe olan merakı yüzünden çevresini oyalayacak elinde doneleri
+                  çok fazladır. Bazen garip bir yalnızlık duygusuna kapıldıkları için , onu hoş görmek gerekir. Bu duygu
+                  geçtiği zaman, tekrar size dönecektir. İyi bir baba olmasına rağmen çocuklarının ayaklarını sağlam
+                  basması için, çoğu kez onları tek başlarına karar vermelerini ister.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="balik"></div>
+
+      </div>
+
+    </div>
+    <!-- Kova BURCU BİTİŞ -->
+
+
+
+
+    <!-- Balık BURCU BAŞLANGIÇ -->
+    <div class="row border border-5 border-dark rounded-5 p-4 bg-dark text-white mt-5">
+      <h2 class="text-center block">Balık Burcu <small>(19 Şubat - 20 Mart)</small></h2>
+      <div class="col-12 mt-1 block">
+        <img class="rounded-circle" src="resimler/balik-burcu-1-2.webp" alt="">
+        <h4 class="mb-2 text-success">Kişisel Özellikleri:</h4>
+        <p class="my-auto">Sabır, eli açıklık ve duyarlılık bu burçta doğan kişilerin en önemli nitelikleridir. Büyük
+          bir inandırma yetenekleri vardır. Dürüst, vicdan sahibi, sadık ve uysaldırlar. Her çevreye kolayca
+          uyabilirler. Genellikle hayal dünyasında yaşarlar. Yaşam görüşleri ciddi fakat gerçekçi değildirler. Balık
+          burcu, diğer burçlar arasında dış etkenlerden en çok etkilenen kişilerdir. Düş dünyasında, öylesine mutludur
+          ki, bazen onun aptal olduğunu bile düşünebilirsiniz. Ama, zannettiğinizden daha akıllı ve kurnazdır. Sinirli
+          yapısını gizli bir sakinlikle örterken, herkesin seçtiği özel bir kişi olmanın hayallerini kurarlar. Yaşam
+          onun için ürkütücü ve korkunçtur..Balık burcu insanını dışarıdan gözlemleyenler; duygusal yapısının bir aşk
+          acısına dayanamayacağını zannederler ve kötü haberi hemen vermek istemezler. Aslında, kırılgan görüntüsünün
+          altında güçlü bir kişilik yatar. Göz yaşlarını kısa sürede kurutur ve mendillerini bir kenara atarak, yeni bir
+          yaşamın içinde kendini bulur. Onları teselli edecek o kadar kişi bulunur ki; yeni bir aşk acısı kapısını
+          çalıncaya kadar, hayatını istediği gibi yaşar. Duygusal kırıklıklar pes etmelerine yetmez ve bir sürü yarım
+          kalmış aşkıyla birlikte bir dolu anlatılacak anılarıyla yaşamını tamamlar.</p>
+        <h4 class="mt-5 mb-2 text-warning">Fiziksel Özellikleri:</h4>
+        <p>Balık etinde olup kol ve bacakları kısadır. Soluk tenli, açık kahverengi gözlü, uykulu gibi mahmur gözleri
+          vardır. Kilo almaya meyillidirler. Yaşı ilerlediği zaman alın açılır ve şakaklardan beyazlamaya başlar. Her
+          şeye çok çabuk ağladıkları için, gözleri hep nemlidir. Balıklar son derece hassas insanlardır. Kendi
+          dünyalarında yarattıkları fanteziler ve gerçekler arasında sıkışır kalırlar. Zodyak’ın en melankolik burcudur.
+          Kafalarına taktıkları bir problemleri varsa, çevrelerinden kopuk yaşarlar. Sürekli uykusuzluk çekerler.
+          Sinirleri çok hassas oldukları içinde çok çabuk yıpranırlar. Alkol ve uyuşturucuya karşı dayanıksız bir
+          yapıları olmasına rağmen, her fırsatta bu tür şeylere sığınabilirler. Yıllardır yapılan astrolojik
+          araştırmalara göre; intihar vakaların çoğu balık insanlarında rastlanmıştır. Psikologlara en çok giden
+          kişilerin de balık insanları olduğu saptanmıştır. Kış mevsimi balıklar için çok zor geçer. Soğuk algınlığına
+          çabuk yakalanmaları, tüm mevsimi ellerinde mendil ile geçirmelerine neden olur. Ayakları çok hassas olduğu
+          için, en küçük bir üşütmede karın ağrısı çekerler ve çok çabuk yatağa düşerler.</p>
+      </div>
+
+
+      <div class="d-flex mx-auto w-100 mt-4">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger me-3 w-100" data-bs-toggle="modal" data-bs-target="#exampleModal23">
+          Balık Kadını
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal23" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div id="modal-content1" class="modal-content bg-danger text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Balık Kadını Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>Sonsuz aşka ve romantizme inanır. Hayal güçleri çok kuvvetlidir. Hayal kırıklıkları yaşamlarından hiç
+                  eksik olmaz fakat yinede aşkı aramaktan vazgeçmezler. Aşamadıkları kalp ağrılarına rağmen, her yeni
+                  aşka umutla bakarlar. Duyguları sürekli karışıktır. Güven arayışı içinde oldukları için, bazen yanlış
+                  ilişkiler yaşamaları her şeyi yeni baştan başlatmalarına neden olur. Alışkanlıklarını kısa sürede terk
+                  ettikleri içinde, kalp acılarını çabuk unuturlar ve yeniden aşık olurlar. Evliliğe en yatkın ve arzulu
+                  burçtur. Çoluk çocuğa karışma konusunda acele ederler. Geçmişten kolayca kopmadıkları için, anıların
+                  yaşantılarında yeri çok fazladır ve kimsenin geçmişleri için, kötü bir söz söylemelerine izin
+                  vermezler. Dünyaya gözlerini açtıkları anda, geçmişlerine bağlı olarak yaşarlar Yaşamlarında anneleri
+                  çok önemlidir..Duygu ve sezgileri çok güçlüdür ve ideal eşlerini gördükler anda, onların
+                  yaşantılarında önemli yeri olacaklarını hissederler. Aldatmaktan ve aldanmaktan nefret ederler ve bu
+                  konuda asla affedici değildirler. Güvenli ilişkileri severler. Aşkta mantıkla değil, duygularla
+                  hareket ederler. İçlerinde devamlı red edilme korkusu ile yaşarlar. Çoğu kez duygularını açıklamaktan
+                  hoşlanmazlar. Güvendikleri kişilerden aldıkları destek çok önemlidir.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal24">
+          Balık Erkeği
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal24" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content bg-primary text-white">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 text-dark" id="exampleModalLabel">Balık Erkeği Özellikleri</h1>
+                <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>O, yalnız bir adamdır.. Ne zaman, ne yapacağı hiç belli olmaz. Onu tanımakla şanslı mısınız, hiç
+                  bilinmez. Size elini uzatır ve kendi denizinde birlikte yüzmenizi teklif eder. Oysa, her şey size
+                  yapancıdır. Şaşkınlıkla ona eşlik etmeye çalışırsınız. Sizin sınırlarınızı bilmez. Hep kendi sularında
+                  yüzer. Yüzmeyi onun kadar bilmiyorsanız, alır başını çeker gider. Ona belki de asla bir daha
+                  karşılaşma şansınız olamayacak ve akılınızda daima gözyaşlarını silen bir Balık hatırlayacaksınız. Bir
+                  gün bittiğine sizde inanmayacaksınız. Belki de yıllar sonra, yanınızda size eşlik edecek bir Balık
+                  erkeği olacaktır. Hangisinin olacağın siz karar vereceksiniz. Kendi değer yargılarına göre yaşamaktan
+                  yanadır. Çevreye farklı gelen yapısıyla hep bir giz olarak anılacaktır. Kendisini güven içinde
+                  hissetmesi için, sürekli korunmaya ihtiyacı vardır. Bu şartları ona sağlarsanız, ömür boyu size
+                  yaslanacak ve mutlu olacaktır. Kendisinden uzaklaştığınızı fark ederse, sessizce başka güvenler
+                  arayacaktır.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Balık BURCU BİTİŞ -->
+  </div>
+
+
+
+
+  <div id="burcozellik"></div>
+  <div class="container-fluid mt-5 bg-secondary p-5 rounded-5">
+    <h3 class="text-center mb-5 text-white block">Burçların Özellikleri</h3>
+    <div class="accordion" id="accordionExample">
+
+      <div class="row view">
+        <div class="col-12 col-lg-6 block">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button bg-warning" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <h5>1 - Koç Burcu Özellikleri</h5>
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="fs-5">- Yıldızın: Mars</p>
+                <p class="fs-5">- Grubun: Ateş, Pozitif</p>
+                <p class="fs-5">- Niteliği: Öncü</p>
+                <p class="fs-5">- Burcunun cinsiyeti: Eril</p>
+                <p class="fs-5">- Yeteneğin: Canlılık ve hareket</p>
+                <p class="fs-5">- Hedeflerin: Öncülük, liderlik, yol göstericilik, yenilikçilik</p>
+                <p class="fs-5">- Şanslı günün: Salı</p>
+                <p class="fs-5">- Şans getiren taşın: Pırlanta</p>
+                <p class="fs-5">- Uyumlu Burç: Aslan ve Yay</p>
+                <p class="fs-5">- Karşıt Burcun: Terazi</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button bg-warning" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                <h5>2 - Boğa Burcu Özellikleri</h5>
+              </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="fs-5">- Yıldızın: Venüs</p>
+                <p class="fs-5">- Grubun: Toprak, negatif</p>
+                <p class="fs-5">- Niteliği: Sabit</p>
+                <p class="fs-5">- Burcunun cinsiyeti: Dişi</p>
+                <p class="fs-5">- Yeteneğin: Sıcakkanlı olmak ve istediğini bilmek, hırslı olmak</p>
+                <p class="fs-5">- Hedefin: Devamlı ileri atılım</p>
+                <p class="fs-5">- Şanslı günün: Cuma</p>
+                <p class="fs-5">- Şans getiren taşın: Zümrüt</p>
+                <p class="fs-5">- Uyumlu Burç: Yengeç, Başak, Oğlak ve Balık</p>
+                <p class="fs-5">- Karşıt Burcun: Akrep</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button bg-warning" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                <h5>3 - İkizler Burcu Özellikleri</h5>
+              </button>
+            </h2>
+            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="fs-5">- Yıldızın: Merkür</p>
+                <p class="fs-5">- Grubun: Hava, pozitif</p>
+                <p class="fs-5">- Niteliği: Değişken</p>
+                <p class="fs-5">- Burcunun cinsiyeti: Eril</p>
+                <p class="fs-5">- Yeteneğin: Üstün zekâ</p>
+                <p class="fs-5">- Özelliğin: Yardımcı olmak, neşe yaratmak</p>
+                <p class="fs-5">- Şanslı günün: Çarşamba</p>
+                <p class="fs-5">- Şans getiren taşın: Akik ve İnci</p>
+                <p class="fs-5">- Uyumlu Burç: Koç, Aslan, Terazi ve Kova</p>
+                <p class="fs-5">- Karşıt Burcun: Yay</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button bg-warning" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                <h5>4 - Yengeç Burcu Özellikleri</h5>
+              </button>
+            </h2>
+            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="fs-5">- Yıldızın: Ay</p>
+                <p class="fs-5">- Grubun: Su, negatif</p>
+                <p class="fs-5">- Niteliği: Öncü</p>
+                <p class="fs-5">- Burcunun cinsiyeti: Dişi</p>
+                <p class="fs-5">- Yeteneğin: Sabırlı olmak</p>
+                <p class="fs-5">- Özelliğin: Merhametli, yumuşak huylu, iyi niyetli olmak</p>
+                <p class="fs-5">- Şanslı günün: Pazartesi</p>
+                <p class="fs-5">- Şans getiren taşın: Yakut ve Ay taşı</p>
+                <p class="fs-5">- Uyumlu Burç: Boğa, Akrep veya Balık</p>
+                <p class="fs-5">- Karşıt Burcun: Oğlak</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button bg-warning" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                <h5>5 - Aslan Burcu Özellikleri</h5>
+              </button>
+            </h2>
+            <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="fs-5">- Yıldızın: Güneş</p>
+                <p class="fs-5">- Grubun: Ateş, Pozitif</p>
+                <p class="fs-5">- Niteliği: Sabit</p>
+                <p class="fs-5">- Burcunun cinsiyeti: Eril</p>
+                <p class="fs-5">- Yeteneğin: Plan yapma</p>
+                <p class="fs-5">- Özelliğin: Cömertlik</p>
+                <p class="fs-5">- Şanslı günün: Pazar</p>
+                <p class="fs-5">- Şans getiren taşın: Sarı safir, sarı pırlanta</p>
+                <p class="fs-5">- Uyumlu Burç: Koç ve Yay</p>
+                <p class="fs-5">- Karşıt Burcun: Kova</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button bg-warning" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                <h5>6 - Başak Burcu Özellikleri</h5>
+              </button>
+            </h2>
+            <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="fs-5">- Yıldızın: Merkür</p>
+                <p class="fs-5">- Grubun: Toprak, negatif</p>
+                <p class="fs-5">- Niteliği: Değişken</p>
+                <p class="fs-5">- Burcunun cinsiyeti: Dişi</p>
+                <p class="fs-5">- Yeteneğin: Disiplinli ve metotlu bir hayat</p>
+                <p class="fs-5">- Özelliğin: Dikkatli ve her şey ile ilgili olmak</p>
+                <p class="fs-5">- Şanslı günün: Çarşamba</p>
+                <p class="fs-5">- Şans getiren taşın: Koyu mavi, safir ve zebercet</p>
+                <p class="fs-5">- Uyumlu Burç: Boğa ve Oğlak</p>
+                <p class="fs-5">- Karşıt Burcun: Balık</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-12 col-lg-6 block">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button bg-warning" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                <h5>7 - Terazi Burcu Özellikleri</h5>
+              </button>
+            </h2>
+            <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="fs-5">- Yıldızın: Venüs</p>
+                <p class="fs-5">- Grubun: Hava, Negatif</p>
+                <p class="fs-5">- Niteliği: Öncü</p>
+                <p class="fs-5">- Burcunun cinsiyeti: Eril</p>
+                <p class="fs-5">- Yeteneğin: Dengeli ve ölçülü olmak</p>
+                <p class="fs-5">- Özelliğin: Saygı ve zariflik</p>
+                <p class="fs-5">- Şanslı günün: Cuma</p>
+                <p class="fs-5">- Şans getiren taşın: Opal</p>
+                <p class="fs-5">- Uyumlu Burç: İkizler ve Kova</p>
+                <p class="fs-5">- Karşıt Burcun: Koç</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button bg-warning" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                <h5>8 - Akrep Burcu Özellikleri</h5>
+              </button>
+            </h2>
+            <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="fs-5">- Yıldızın: Mars ve Plüton</p>
+                <p class="fs-5">- Grubun: Su, Negatif</p>
+                <p class="fs-5">- Niteliği: Sabit</p>
+                <p class="fs-5">- Burcunun cinsiyeti: Dişi</p>
+                <p class="fs-5">- Yeteneğin: Sezgi</p>
+                <p class="fs-5">- Özelliğin: Kararlılık ve İnceleme</p>
+                <p class="fs-5">- Şanslı günün: Salı</p>
+                <p class="fs-5">- Şans getiren taşın: Topaz</p>
+                <p class="fs-5">- Uyumlu Burç: Yengeç ve Balık</p>
+                <p class="fs-5">- Karşıt Burcun: Boğa</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button bg-warning" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                <h5>9 - Yay Burcu Özellikleri</h5>
+              </button>
+            </h2>
+            <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="fs-5">- Yıldızın: Jüpiter</p>
+                <p class="fs-5">- Grubun: Ateş, Pozitif</p>
+                <p class="fs-5">- Niteliği: Değişken</p>
+                <p class="fs-5">- Burcunun cinsiyeti: Eril</p>
+                <p class="fs-5">- Yeteneğin: Düşünme</p>
+                <p class="fs-5">- Hedefin: Büyük üne kavuşmak</p>
+                <p class="fs-5">- Şanslı günün: Perşembe</p>
+                <p class="fs-5">- Şans getiren taşın: Turkuaz, mor ve tonları </p>
+                <p class="fs-5">- Uyumlu Burç: Terazi ve Kova</p>
+                <p class="fs-5">- Karşıt Burcun: İkizler</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button bg-warning" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                <h5>10 - Oğlak Burcu Özellikleri</h5>
+              </button>
+            </h2>
+            <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="fs-5">- Yıldızın: Satürn</p>
+                <p class="fs-5">- Grubun: Toprak, negatif</p>
+                <p class="fs-5">- Niteliği: Öncü</p>
+                <p class="fs-5">- Burcunun cinsiyeti: Dişi</p>
+                <p class="fs-5">- Yeteneğin: Karar ve direniş</p>
+                <p class="fs-5">- Hedefin: Yükselmek</p>
+                <p class="fs-5">- Şanslı günün: Cumartesi</p>
+                <p class="fs-5">- Şans getiren taşın: Lal</p>
+                <p class="fs-5">- Uyumlu Burç: Boğa ve Başak</p>
+                <p class="fs-5">- Karşıt Burcun: Yengeç</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button bg-warning" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                <h5>11 - Kova Burcu Özellikleri</h5>
+              </button>
+            </h2>
+            <div id="collapse11" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="fs-5">- Yıldızın: Uranüs</p>
+                <p class="fs-5">- Grubun: Hava, pozitif</p>
+                <p class="fs-5">- Niteliği: Sabit</p>
+                <p class="fs-5">- Burcunun cinsiyeti: Eril</p>
+                <p class="fs-5">- Yeteneğin: Sağduyu</p>
+                <p class="fs-5">- Amacın: Yükselmek, başkalarına yardım etmek</p>
+                <p class="fs-5">- Şanslı günün: Pazar</p>
+                <p class="fs-5">- Şans getiren taşın: Ametist ve yeşim</p>
+                <p class="fs-5">- Uyumlu Burç: İkizler, Yay</p>
+                <p class="fs-5">- Karşıt Burcun: Aslan</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button bg-warning" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                <h5>12 - Balık Burcu Özellikleri</h5>
+              </button>
+            </h2>
+            <div id="collapse12" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <p class="fs-5">- Yıldızın: Neptün</p>
+                <p class="fs-5">- Grubun: Su, negatif</p>
+                <p class="fs-5">- Niteliği: Değişken</p>
+                <p class="fs-5">- Burcunun cinsiyeti: Dişi</p>
+                <p class="fs-5">- Yeteneğin: Başkalarına karşı ilgili ve şefkatli olmak</p>
+                <p class="fs-5">- Amacın: Servete ve mutluluğa ulaşmak</p>
+                <p class="fs-5">- Şanslı günün: Perşembe</p>
+                <p class="fs-5">- Şans getiren taşın: Akvamaren</p>
+                <p class="fs-5">- Uyumlu Burç: Boğa, Yengeç ve Oğlak</p>
+                <p class="fs-5">- Karşıt Burcun: Başak</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="iletisim"></div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="container-fluid mt-5">
+    <form class="bg-success p-3 rounded-5">
+
+      <h3 class="text-center mb-4 mt-3">Bana Ulaşın</h3>
+
+      <div class="mb-3 form-floating w-75 mx-auto">
+        <input type="text" class="form-control rounded-4" id="isim" placeholder="">
+        <label for="isim">İsminiz</label>
+      </div>
+
+      <div class="mb-3 form-floating w-75 mx-auto">
+        <input type="email" class="form-control rounded-4" id="email" placeholder="">
+        <label for="email">Email Adresiniz</label>
+      </div>
+
+      <div class="mb-3 form-floating w-75 mx-auto mt-4">
+        <textarea name="description" id="description" class="form-control" placeholder=""
+          style="resize: none;"></textarea>
+        <label for="description" class="form-label">Mesajınız</label>
+      </div>
+
+      <button class="btn btn-warning w-75 mt-4 mb-4">
+        Gönder
+      </button>
+
+    </form>
+  </div>
+
+
+
+
+<!-- Toolbar -->
+  <div class="container mt-5">
+    <div class="row mb-5">
+      <div class="col">
+        <div class="btn-toolbar justify-content-center">
+
+          <div class="btn-group btn-group-md me-2">
+            <button class="btn btn-outline-primary">&laquo;</button>
+            <button class="btn btn-outline-primary active">1</button>
+            <button class="btn btn-outline-primary">2</button>
+            <button class="btn btn-outline-primary">3</button>
+            <button class="btn btn-outline-primary">&raquo;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <footer class="fst-italic">
+    <div id="hakkimizda" class="container-fluid text-white pt-5 px-4 rounded-5">
+      <h3 class="text-center mb-4">Hakkımıza</h3>
+      <p class="text-center">Bu site 09/06/2024 tarihinde Gökşen Safcan tarafından yapılmıştır.</p>
+      <p class="text-center">Aşşağıdaki linklerden bizlere ulaşabilirsiniz</p>
+
+      <p class="text-center">
+        <a href="" class="facebook"><i class="fab fa-facebook"></i></a>
+        <a href="" class="twitter"><i class="fab fa-twitter"></i></a>
+        <a href="" class="instagram"><i class="fab fa-instagram"></i></a>
+      </p>
+
+      <div>
+        © 2024 G Group Information Technologies, Inc.
+      </div>
+
+      <p class="text-center mt-3">
+        <a class="navbar-brand" id="logo" href="#container1"><img class="rounded-circle mb-4" src="resimler/Glogo.png" alt=""></a>
+      </p>
+
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
